@@ -14,19 +14,26 @@
     "header": {
       "type": "string"
     },
-    "EmailInfo": {
-      "displayName": "Contact Us Block",
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.contact-us-block"
-    },
-    "LocationInfo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.contact-us-block"
-    },
     "description": {
       "type": "blocks"
+    },
+    "email_title": {
+      "type": "string"
+    },
+    "email_description": {
+      "type": "string"
+    },
+    "email_email": {
+      "type": "email"
+    },
+    "location_title": {
+      "type": "string"
+    },
+    "location_description": {
+      "type": "string"
+    },
+    "location_location": {
+      "type": "string"
     }
   }
 }

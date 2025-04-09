@@ -1,19 +1,5 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
-export interface SharedContactUsBlock extends Struct.ComponentSchema {
-  collectionName: 'components_shared_contact_us_blocks';
-  info: {
-    description: '';
-    displayName: 'Contact Us Block';
-    icon: 'bulletList';
-  };
-  attributes: {
-    ContactLink: Schema.Attribute.Component<'shared.link', false>;
-    subtitle: Schema.Attribute.String;
-    title: Schema.Attribute.String;
-  };
-}
-
 export interface SharedLink extends Struct.ComponentSchema {
   collectionName: 'components_shared_links';
   info: {
@@ -91,7 +77,6 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
-      'shared.contact-us-block': SharedContactUsBlock;
       'shared.link': SharedLink;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;

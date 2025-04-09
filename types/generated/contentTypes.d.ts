@@ -489,7 +489,9 @@ export interface ApiContactUsContactUs extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Blocks;
-    EmailInfo: Schema.Attribute.Component<'shared.contact-us-block', false>;
+    email_description: Schema.Attribute.String;
+    email_email: Schema.Attribute.Email;
+    email_title: Schema.Attribute.String;
     header: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -497,7 +499,9 @@ export interface ApiContactUsContactUs extends Struct.SingleTypeSchema {
       'api::contact-us.contact-us'
     > &
       Schema.Attribute.Private;
-    LocationInfo: Schema.Attribute.Component<'shared.contact-us-block', false>;
+    location_description: Schema.Attribute.String;
+    location_location: Schema.Attribute.String;
+    location_title: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
