@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "contact_uses",
+  "info": {
+    "singularName": "contact-us",
+    "pluralName": "contact-uses",
+    "displayName": "Contact Us",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "EmailInfo": {
+      "displayName": "Contact Us Block",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.contact-us-block"
+    },
+    "LocationInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.contact-us-block"
+    },
+    "description": {
+      "type": "blocks"
+    }
+  }
+}
