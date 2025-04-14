@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "section_get_starteds",
+  "info": {
+    "singularName": "section-get-started",
+    "pluralName": "section-get-starteds",
+    "displayName": "Section - Get Started"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subheading": {
+      "type": "string"
+    },
+    "eligibility_button_text": {
+      "type": "string"
+    },
+    "check_rate_text": {
+      "type": "string"
+    },
+    "disclaimer_text": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "section_faqs",
+  "info": {
+    "singularName": "section-faq",
+    "pluralName": "section-faqs",
+    "displayName": "Section - FAQ",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "subheader": {
+      "type": "string"
+    },
+    "faq_button_text": {
+      "type": "string"
+    },
+    "contact_button_text": {
+      "type": "string"
+    },
+    "faq_entry": {
+      "displayName": "FAQ Entry",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.faq-entry"
+    },
+    "contact_email": {
+      "type": "email"
+    }
+  }
+}
