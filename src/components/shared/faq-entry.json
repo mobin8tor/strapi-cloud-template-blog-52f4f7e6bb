@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_faq_entries",
+  "info": {
+    "displayName": "FAQ Entry",
+    "icon": "information"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string"
+    },
+    "answer": {
+      "type": "text"
+    }
+  }
+}

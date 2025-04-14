@@ -477,7 +477,7 @@ export interface ApiContactUsContactUs extends Struct.SingleTypeSchema {
   collectionName: 'contact_uses';
   info: {
     description: '';
-    displayName: 'Contact Us';
+    displayName: 'Page - Contact Us';
     pluralName: 'contact-uses';
     singularName: 'contact-us';
   };
@@ -535,6 +535,73 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     siteDescription: Schema.Attribute.Text & Schema.Attribute.Required;
     siteName: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSectionFaqSectionFaq extends Struct.SingleTypeSchema {
+  collectionName: 'section_faqs';
+  info: {
+    description: '';
+    displayName: 'Section - FAQ';
+    pluralName: 'section-faqs';
+    singularName: 'section-faq';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_button_text: Schema.Attribute.String;
+    contact_email: Schema.Attribute.Email;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    faq_button_text: Schema.Attribute.String;
+    faq_entry: Schema.Attribute.Component<'shared.faq-entry', true>;
+    header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::section-faq.section-faq'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    subheader: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSectionGetStartedSectionGetStarted
+  extends Struct.SingleTypeSchema {
+  collectionName: 'section_get_starteds';
+  info: {
+    displayName: 'Section - Get Started';
+    pluralName: 'section-get-starteds';
+    singularName: 'section-get-started';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    check_rate_text: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    disclaimer_text: Schema.Attribute.String;
+    eligibility_button_text: Schema.Attribute.String;
+    heading: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::section-get-started.section-get-started'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    subheading: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1055,6 +1122,8 @@ declare module '@strapi/strapi' {
       'api::category.category': ApiCategoryCategory;
       'api::contact-us.contact-us': ApiContactUsContactUs;
       'api::global.global': ApiGlobalGlobal;
+      'api::section-faq.section-faq': ApiSectionFaqSectionFaq;
+      'api::section-get-started.section-get-started': ApiSectionGetStartedSectionGetStarted;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

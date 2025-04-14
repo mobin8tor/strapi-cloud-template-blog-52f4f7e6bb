@@ -1,5 +1,17 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedFaqEntry extends Struct.ComponentSchema {
+  collectionName: 'components_shared_faq_entries';
+  info: {
+    displayName: 'FAQ Entry';
+    icon: 'information';
+  };
+  attributes: {
+    answer: Schema.Attribute.Text;
+    question: Schema.Attribute.String;
+  };
+}
+
 export interface SharedLink extends Struct.ComponentSchema {
   collectionName: 'components_shared_links';
   info: {
@@ -77,6 +89,7 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'shared.faq-entry': SharedFaqEntry;
       'shared.link': SharedLink;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
