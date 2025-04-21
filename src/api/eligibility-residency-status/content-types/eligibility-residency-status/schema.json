@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "eligibility_residency_statuses",
+  "info": {
+    "singularName": "eligibility-residency-status",
+    "pluralName": "eligibility-residency-statuses",
+    "displayName": "Eligibility - Residency Status"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "visa_label": {
+      "type": "string"
+    },
+    "green_card_label": {
+      "type": "string"
+    },
+    "opt_label": {
+      "type": "string"
+    },
+    "us_citizen_label": {
+      "type": "string"
+    },
+    "other_label": {
+      "type": "string"
+    }
+  }
+}

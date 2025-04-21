@@ -34,6 +34,12 @@
     },
     "location_location": {
       "type": "string"
+    },
+    "phone_title": {
+      "type": "string"
+    },
+    "phone_description": {
+      "type": "string"
     }
   }
 }

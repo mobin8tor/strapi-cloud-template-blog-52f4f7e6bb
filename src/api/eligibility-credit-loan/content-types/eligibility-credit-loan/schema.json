@@ -1,0 +1,44 @@
+{
+  "kind": "singleType",
+  "collectionName": "eligibility_credit_loans",
+  "info": {
+    "singularName": "eligibility-credit-loan",
+    "pluralName": "eligibility-credit-loans",
+    "displayName": "Eligibility - Credit/Loan"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "yes_label": {
+      "type": "string"
+    },
+    "specify_credit_loan_label": {
+      "type": "string"
+    },
+    "credit_card_label": {
+      "type": "string"
+    },
+    "personal_loan_label": {
+      "type": "string"
+    },
+    "student_loan_label": {
+      "type": "string"
+    },
+    "auto_loan_label": {
+      "type": "string"
+    },
+    "mortgage_label": {
+      "type": "string"
+    },
+    "credit_builder_label": {
+      "type": "string"
+    },
+    "no_label": {
+      "type": "string"
+    }
+  }
+}

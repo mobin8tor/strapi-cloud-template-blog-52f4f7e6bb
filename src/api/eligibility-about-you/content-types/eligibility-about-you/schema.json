@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "eligibility_about_yous",
+  "info": {
+    "singularName": "eligibility-about-you",
+    "pluralName": "eligibility-about-yous",
+    "displayName": "Eligibility - About You"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "first_name_label": {
+      "type": "string"
+    },
+    "last_name_label": {
+      "type": "string"
+    },
+    "email_address_label": {
+      "type": "string"
+    },
+    "date_of_birth_label": {
+      "type": "string"
+    },
+    "state_of_residence_label": {
+      "type": "string"
+    },
+    "header": {
+      "type": "string"
+    }
+  }
+}

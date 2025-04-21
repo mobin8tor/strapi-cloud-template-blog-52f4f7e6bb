@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "eligibility_no_bank_accounts",
+  "info": {
+    "singularName": "eligibility-no-bank-account",
+    "pluralName": "eligibility-no-bank-accounts",
+    "displayName": "Eligibility - No Bank Account"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "subheader": {
+      "type": "string"
+    },
+    "open_account_label": {
+      "type": "string"
+    },
+    "next_button_text": {
+      "type": "string"
+    }
+  }
+}

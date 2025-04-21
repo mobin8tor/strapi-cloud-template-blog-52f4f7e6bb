@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "eligibility_overviews",
+  "info": {
+    "singularName": "eligibility-overview",
+    "pluralName": "eligibility-overviews",
+    "displayName": "Eligibility - Overview"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "subheader": {
+      "type": "string"
+    },
+    "started_application_text": {
+      "type": "string"
+    },
+    "resume_link_text": {
+      "type": "string"
+    },
+    "next_button_text": {
+      "type": "string"
+    }
+  }
+}

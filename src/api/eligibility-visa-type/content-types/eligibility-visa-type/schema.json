@@ -1,0 +1,62 @@
+{
+  "kind": "singleType",
+  "collectionName": "eligibility_visa_types",
+  "info": {
+    "singularName": "eligibility-visa-type",
+    "pluralName": "eligibility-visa-types",
+    "displayName": "Eligibility - Visa Type"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "h1b_label": {
+      "type": "string"
+    },
+    "h1b_renewed_label": {
+      "type": "string"
+    },
+    "f1_not_graduated_label": {
+      "type": "string"
+    },
+    "f1_opt_label": {
+      "type": "string"
+    },
+    "f1_opt_stem_label": {
+      "type": "string"
+    },
+    "l1_label": {
+      "type": "string"
+    },
+    "l2_label": {
+      "type": "string"
+    },
+    "o1_label": {
+      "type": "string"
+    },
+    "e1_label": {
+      "type": "string"
+    },
+    "e2_label": {
+      "type": "string"
+    },
+    "e3_label": {
+      "type": "string"
+    },
+    "tn_label": {
+      "type": "string"
+    },
+    "g1_label": {
+      "type": "string"
+    },
+    "j1_label": {
+      "type": "string"
+    },
+    "other_label": {
+      "type": "string"
+    }
+  }
+}
