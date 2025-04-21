@@ -369,6 +369,43 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiApplicationGlobalApplicationGlobal
+  extends Struct.SingleTypeSchema {
+  collectionName: 'application_globals';
+  info: {
+    displayName: 'Application Global';
+    pluralName: 'application-globals';
+    singularName: 'application-global';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    about_you_section_description: Schema.Attribute.String;
+    about_you_section_label: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    eligibility_section_description: Schema.Attribute.String;
+    eligibility_section_label: Schema.Attribute.String;
+    final_verification_section_description: Schema.Attribute.String;
+    final_verification_section_label: Schema.Attribute.String;
+    income_section_description: Schema.Attribute.String;
+    income_section_label: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::application-global.application-global'
+    > &
+      Schema.Attribute.Private;
+    next_button_text: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   collectionName: 'articles';
   info: {
@@ -502,10 +539,289 @@ export interface ApiContactUsContactUs extends Struct.SingleTypeSchema {
     location_description: Schema.Attribute.String;
     location_location: Schema.Attribute.String;
     location_title: Schema.Attribute.String;
+    phone_description: Schema.Attribute.String;
+    phone_title: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+  };
+}
+
+export interface ApiEligibilityAboutYouEligibilityAboutYou
+  extends Struct.SingleTypeSchema {
+  collectionName: 'eligibility_about_yous';
+  info: {
+    displayName: 'Eligibility - About You';
+    pluralName: 'eligibility-about-yous';
+    singularName: 'eligibility-about-you';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date_of_birth_label: Schema.Attribute.String;
+    email_address_label: Schema.Attribute.String;
+    first_name_label: Schema.Attribute.String;
+    header: Schema.Attribute.String;
+    last_name_label: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::eligibility-about-you.eligibility-about-you'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    state_of_residence_label: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiEligibilityBankAccountEligibilityBankAccount
+  extends Struct.SingleTypeSchema {
+  collectionName: 'eligibility_bank_accounts';
+  info: {
+    displayName: 'Eligibility - Bank Account';
+    pluralName: 'eligibility-bank-accounts';
+    singularName: 'eligibility-bank-account';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::eligibility-bank-account.eligibility-bank-account'
+    > &
+      Schema.Attribute.Private;
+    no_label: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    yes_label: Schema.Attribute.String;
+  };
+}
+
+export interface ApiEligibilityCreditLoanEligibilityCreditLoan
+  extends Struct.SingleTypeSchema {
+  collectionName: 'eligibility_credit_loans';
+  info: {
+    displayName: 'Eligibility - Credit/Loan';
+    pluralName: 'eligibility-credit-loans';
+    singularName: 'eligibility-credit-loan';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    auto_loan_label: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    credit_builder_label: Schema.Attribute.String;
+    credit_card_label: Schema.Attribute.String;
+    header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::eligibility-credit-loan.eligibility-credit-loan'
+    > &
+      Schema.Attribute.Private;
+    mortgage_label: Schema.Attribute.String;
+    no_label: Schema.Attribute.String;
+    personal_loan_label: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    specify_credit_loan_label: Schema.Attribute.String;
+    student_loan_label: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    yes_label: Schema.Attribute.String;
+  };
+}
+
+export interface ApiEligibilityNoBankAccountEligibilityNoBankAccount
+  extends Struct.SingleTypeSchema {
+  collectionName: 'eligibility_no_bank_accounts';
+  info: {
+    displayName: 'Eligibility - No Bank Account';
+    pluralName: 'eligibility-no-bank-accounts';
+    singularName: 'eligibility-no-bank-account';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::eligibility-no-bank-account.eligibility-no-bank-account'
+    > &
+      Schema.Attribute.Private;
+    next_button_text: Schema.Attribute.String;
+    open_account_label: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    subheader: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiEligibilityOverviewEligibilityOverview
+  extends Struct.SingleTypeSchema {
+  collectionName: 'eligibility_overviews';
+  info: {
+    displayName: 'Eligibility - Overview';
+    pluralName: 'eligibility-overviews';
+    singularName: 'eligibility-overview';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::eligibility-overview.eligibility-overview'
+    > &
+      Schema.Attribute.Private;
+    next_button_text: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    resume_link_text: Schema.Attribute.String;
+    started_application_text: Schema.Attribute.String;
+    subheader: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiEligibilityResidencyStatusEligibilityResidencyStatus
+  extends Struct.SingleTypeSchema {
+  collectionName: 'eligibility_residency_statuses';
+  info: {
+    displayName: 'Eligibility - Residency Status';
+    pluralName: 'eligibility-residency-statuses';
+    singularName: 'eligibility-residency-status';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    green_card_label: Schema.Attribute.String;
+    header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::eligibility-residency-status.eligibility-residency-status'
+    > &
+      Schema.Attribute.Private;
+    opt_label: Schema.Attribute.String;
+    other_label: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    us_citizen_label: Schema.Attribute.String;
+    visa_label: Schema.Attribute.String;
+  };
+}
+
+export interface ApiEligibilityVisaTypeEligibilityVisaType
+  extends Struct.SingleTypeSchema {
+  collectionName: 'eligibility_visa_types';
+  info: {
+    displayName: 'Eligibility - Visa Type';
+    pluralName: 'eligibility-visa-types';
+    singularName: 'eligibility-visa-type';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    e1_label: Schema.Attribute.String;
+    e2_label: Schema.Attribute.String;
+    e3_label: Schema.Attribute.String;
+    f1_not_graduated_label: Schema.Attribute.String;
+    f1_opt_label: Schema.Attribute.String;
+    f1_opt_stem_label: Schema.Attribute.String;
+    g1_label: Schema.Attribute.String;
+    h1b_label: Schema.Attribute.String;
+    h1b_renewed_label: Schema.Attribute.String;
+    header: Schema.Attribute.String;
+    j1_label: Schema.Attribute.String;
+    l1_label: Schema.Attribute.String;
+    l2_label: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::eligibility-visa-type.eligibility-visa-type'
+    > &
+      Schema.Attribute.Private;
+    o1_label: Schema.Attribute.String;
+    other_label: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    tn_label: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiEligibilityWorkAuthEligibilityWorkAuth
+  extends Struct.SingleTypeSchema {
+  collectionName: 'eligibility_work_auths';
+  info: {
+    displayName: 'Eligibility - Work Auth';
+    pluralName: 'eligibility-work-auths';
+    singularName: 'eligibility-work-auth';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::eligibility-work-auth.eligibility-work-auth'
+    > &
+      Schema.Attribute.Private;
+    no_label: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    yes_label: Schema.Attribute.String;
   };
 }
 
@@ -524,17 +840,14 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    defaultSeo: Schema.Attribute.Component<'shared.seo', false>;
-    favicon: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::global.global'
     > &
       Schema.Attribute.Private;
+    phone_number: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    siteDescription: Schema.Attribute.Text & Schema.Attribute.Required;
-    siteName: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1117,10 +1430,19 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::application-global.application-global': ApiApplicationGlobalApplicationGlobal;
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
       'api::contact-us.contact-us': ApiContactUsContactUs;
+      'api::eligibility-about-you.eligibility-about-you': ApiEligibilityAboutYouEligibilityAboutYou;
+      'api::eligibility-bank-account.eligibility-bank-account': ApiEligibilityBankAccountEligibilityBankAccount;
+      'api::eligibility-credit-loan.eligibility-credit-loan': ApiEligibilityCreditLoanEligibilityCreditLoan;
+      'api::eligibility-no-bank-account.eligibility-no-bank-account': ApiEligibilityNoBankAccountEligibilityNoBankAccount;
+      'api::eligibility-overview.eligibility-overview': ApiEligibilityOverviewEligibilityOverview;
+      'api::eligibility-residency-status.eligibility-residency-status': ApiEligibilityResidencyStatusEligibilityResidencyStatus;
+      'api::eligibility-visa-type.eligibility-visa-type': ApiEligibilityVisaTypeEligibilityVisaType;
+      'api::eligibility-work-auth.eligibility-work-auth': ApiEligibilityWorkAuthEligibilityWorkAuth;
       'api::global.global': ApiGlobalGlobal;
       'api::section-faq.section-faq': ApiSectionFaqSectionFaq;
       'api::section-get-started.section-get-started': ApiSectionGetStartedSectionGetStarted;

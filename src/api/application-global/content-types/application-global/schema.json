@@ -1,0 +1,41 @@
+{
+  "kind": "singleType",
+  "collectionName": "application_globals",
+  "info": {
+    "singularName": "application-global",
+    "pluralName": "application-globals",
+    "displayName": "Application Global"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "eligibility_section_label": {
+      "type": "string"
+    },
+    "eligibility_section_description": {
+      "type": "string"
+    },
+    "income_section_label": {
+      "type": "string"
+    },
+    "income_section_description": {
+      "type": "string"
+    },
+    "about_you_section_label": {
+      "type": "string"
+    },
+    "about_you_section_description": {
+      "type": "string"
+    },
+    "final_verification_section_label": {
+      "type": "string"
+    },
+    "final_verification_section_description": {
+      "type": "string"
+    },
+    "next_button_text": {
+      "type": "string"
+    }
+  }
+}

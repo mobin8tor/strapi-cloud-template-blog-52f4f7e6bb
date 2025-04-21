@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "eligibility_work_auths",
+  "info": {
+    "singularName": "eligibility-work-auth",
+    "pluralName": "eligibility-work-auths",
+    "displayName": "Eligibility - Work Auth"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "yes_label": {
+      "type": "string"
+    },
+    "no_label": {
+      "type": "string"
+    }
+  }
+}
