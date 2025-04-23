@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_eligibility_sections",
+  "info": {
+    "displayName": "Eligibility Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "bullet": {
+      "displayName": "Eligibility Bullet",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.eligibility-bullet"
+    },
+    "subtext": {
+      "type": "string"
+    },
+    "positive": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

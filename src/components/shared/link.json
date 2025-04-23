@@ -2,15 +2,29 @@
   "collectionName": "components_shared_links",
   "info": {
     "displayName": "Link",
-    "icon": "globe"
+    "icon": "globe",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "Text": {
       "type": "string"
     },
-    "URL": {
-      "type": "string"
+    "internal_url": {
+      "type": "enumeration",
+      "enum": [
+        "home",
+        "about-us",
+        "eligibility",
+        "credit-cards",
+        "how-it-works",
+        "resources",
+        "faq",
+        "contact-us",
+        "application",
+        "privacy-policy",
+        "terms-of-use"
+      ]
     }
   }
 }

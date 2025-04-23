@@ -1,0 +1,45 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_about_uses",
+  "info": {
+    "singularName": "page-about-us",
+    "pluralName": "page-about-uses",
+    "displayName": "Page - About Us",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "card_one": {
+      "displayName": "Metric Card",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.metric-card"
+    },
+    "card_two": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.metric-card"
+    },
+    "solution": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.section"
+    },
+    "our_commitment": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.section"
+    },
+    "solution_card_header": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_resourceses",
+  "info": {
+    "singularName": "page-resources",
+    "pluralName": "page-resourceses",
+    "displayName": "Page - Resources"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "hero_header": {
+      "type": "string"
+    },
+    "hero_description": {
+      "type": "string"
+    },
+    "resource_card_1": {
+      "displayName": "Resource Card",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.resource-card"
+    },
+    "resource_card_2": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.resource-card"
+    },
+    "resource_card_3": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.resource-card"
+    }
+  }
+}

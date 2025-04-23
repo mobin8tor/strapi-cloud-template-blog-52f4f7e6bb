@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_eligibility_bullets",
+  "info": {
+    "displayName": "Eligibility Bullet",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "sub_bullet": {
+      "displayName": "Eligibility Sub Bullet",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.eligibility-sub-bullet"
+    }
+  }
+}

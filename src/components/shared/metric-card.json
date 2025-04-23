@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_metric_cards",
+  "info": {
+    "displayName": "Metric Card"
+  },
+  "options": {},
+  "attributes": {
+    "metric": {
+      "type": "string"
+    },
+    "header": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

@@ -854,6 +854,119 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiPageAboutUsPageAboutUs extends Struct.SingleTypeSchema {
+  collectionName: 'page_about_uses';
+  info: {
+    description: '';
+    displayName: 'Page - About Us';
+    pluralName: 'page-about-uses';
+    singularName: 'page-about-us';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    card_one: Schema.Attribute.Component<'shared.metric-card', false>;
+    card_two: Schema.Attribute.Component<'shared.metric-card', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.String;
+    header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::page-about-us.page-about-us'
+    > &
+      Schema.Attribute.Private;
+    our_commitment: Schema.Attribute.Component<'shared.section', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    solution: Schema.Attribute.Component<'shared.section', false>;
+    solution_card_header: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPageCreditCardPageCreditCard
+  extends Struct.SingleTypeSchema {
+  collectionName: 'page_credit_cards';
+  info: {
+    displayName: 'Page - Credit Card';
+    pluralName: 'page-credit-cards';
+    singularName: 'page-credit-card';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.String;
+    email_placeholder: Schema.Attribute.String;
+    header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::page-credit-card.page-credit-card'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    sign_up_cta_text: Schema.Attribute.String;
+    sign_up_subtext: Schema.Attribute.String;
+    sign_up_text: Schema.Attribute.String;
+    stinger_text: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPageEligibilityPageEligibility
+  extends Struct.SingleTypeSchema {
+  collectionName: 'page_eligibilities';
+  info: {
+    description: '';
+    displayName: 'Page - Eligibility';
+    pluralName: 'page-eligibilities';
+    singularName: 'page-eligibility';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    check_description: Schema.Attribute.String;
+    check_header: Schema.Attribute.String;
+    check_section: Schema.Attribute.Component<
+      'shared.eligibility-section',
+      true
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero_cta_text: Schema.Attribute.String;
+    hero_description: Schema.Attribute.String;
+    hero_header: Schema.Attribute.String;
+    hero_subtext: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::page-eligibility.page-eligibility'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    qualify_cta_text: Schema.Attribute.String;
+    qualify_description: Schema.Attribute.String;
+    qualify_header: Schema.Attribute.String;
+    qualify_subtext: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPageHomePageHome extends Struct.SingleTypeSchema {
   collectionName: 'page_homes';
   info: {
@@ -882,6 +995,87 @@ export interface ApiPageHomePageHome extends Struct.SingleTypeSchema {
     no_credit: Schema.Attribute.Component<'shared.section', false>;
     pay_early: Schema.Attribute.Component<'shared.section', false>;
     publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPageHowItWorksPageHowItWorks
+  extends Struct.SingleTypeSchema {
+  collectionName: 'page_how_it_workses';
+  info: {
+    description: '';
+    displayName: 'Page - How it Works';
+    pluralName: 'page-how-it-workses';
+    singularName: 'page-how-it-works';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    apply_bullet: Schema.Attribute.Component<'shared.benefits-list', true>;
+    apply_cta_text: Schema.Attribute.String;
+    apply_description: Schema.Attribute.String;
+    apply_header: Schema.Attribute.String;
+    apply_list_header: Schema.Attribute.String;
+    apply_overview_1: Schema.Attribute.String;
+    apply_overview_2: Schema.Attribute.String;
+    apply_overview_3: Schema.Attribute.String;
+    apply_subtext: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero_card_description: Schema.Attribute.String;
+    hero_card_header: Schema.Attribute.String;
+    hero_cta_text: Schema.Attribute.String;
+    hero_description: Schema.Attribute.String;
+    hero_header: Schema.Attribute.String;
+    hero_subtext: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::page-how-it-works.page-how-it-works'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    step_1: Schema.Attribute.Component<'shared.how-it-works-step', false>;
+    step_2: Schema.Attribute.Component<'shared.how-it-works-step', true>;
+    step_3: Schema.Attribute.Component<'shared.how-it-works-step', true>;
+    steps_description: Schema.Attribute.String;
+    steps_header: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPageResourcesPageResources extends Struct.SingleTypeSchema {
+  collectionName: 'page_resourceses';
+  info: {
+    displayName: 'Page - Resources';
+    pluralName: 'page-resourceses';
+    singularName: 'page-resources';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero_description: Schema.Attribute.String;
+    hero_header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::page-resources.page-resources'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    resource_card_1: Schema.Attribute.Component<'shared.resource-card', false>;
+    resource_card_2: Schema.Attribute.Component<'shared.resource-card', true>;
+    resource_card_3: Schema.Attribute.Component<'shared.resource-card', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -985,6 +1179,50 @@ export interface ApiSectionFaqSectionFaq extends Struct.SingleTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSectionFooterSectionFooter extends Struct.SingleTypeSchema {
+  collectionName: 'section_footers';
+  info: {
+    description: '';
+    displayName: 'Section - Footer';
+    pluralName: 'section-footers';
+    singularName: 'section-footer';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    company_links: Schema.Attribute.Component<
+      'shared.footer-link-group',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    facebook_url: Schema.Attribute.String;
+    instagram_url: Schema.Attribute.String;
+    legal_text: Schema.Attribute.Blocks;
+    linkedin_url: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::section-footer.section-footer'
+    > &
+      Schema.Attribute.Private;
+    privacy_policy_label: Schema.Attribute.String;
+    product_links: Schema.Attribute.Component<
+      'shared.footer-link-group',
+      false
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    support_links: Schema.Attribute.Component<'shared.footer-link-group', true>;
+    terms_of_use_label: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    x_url: Schema.Attribute.String;
   };
 }
 
@@ -1581,10 +1819,16 @@ declare module '@strapi/strapi' {
       'api::eligibility-visa-type.eligibility-visa-type': ApiEligibilityVisaTypeEligibilityVisaType;
       'api::eligibility-work-auth.eligibility-work-auth': ApiEligibilityWorkAuthEligibilityWorkAuth;
       'api::global.global': ApiGlobalGlobal;
+      'api::page-about-us.page-about-us': ApiPageAboutUsPageAboutUs;
+      'api::page-credit-card.page-credit-card': ApiPageCreditCardPageCreditCard;
+      'api::page-eligibility.page-eligibility': ApiPageEligibilityPageEligibility;
       'api::page-home.page-home': ApiPageHomePageHome;
+      'api::page-how-it-works.page-how-it-works': ApiPageHowItWorksPageHowItWorks;
+      'api::page-resources.page-resources': ApiPageResourcesPageResources;
       'api::section-compare-to-cc.section-compare-to-cc': ApiSectionCompareToCcSectionCompareToCc;
       'api::section-estimate-payment.section-estimate-payment': ApiSectionEstimatePaymentSectionEstimatePayment;
       'api::section-faq.section-faq': ApiSectionFaqSectionFaq;
+      'api::section-footer.section-footer': ApiSectionFooterSectionFooter;
       'api::section-get-started.section-get-started': ApiSectionGetStartedSectionGetStarted;
       'api::section-loan-step.section-loan-step': ApiSectionLoanStepSectionLoanStep;
       'plugin::content-releases.release': PluginContentReleasesRelease;

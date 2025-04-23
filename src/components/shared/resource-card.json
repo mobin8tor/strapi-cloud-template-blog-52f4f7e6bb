@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_resource_cards",
+  "info": {
+    "displayName": "Resource Card"
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "link": {
+      "displayName": "External Link",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.external-link"
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_how_it_workses",
+  "info": {
+    "singularName": "page-how-it-works",
+    "pluralName": "page-how-it-workses",
+    "displayName": "Page - How it Works",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "hero_header": {
+      "type": "string"
+    },
+    "hero_description": {
+      "type": "string"
+    },
+    "hero_card_header": {
+      "type": "string"
+    },
+    "hero_card_description": {
+      "type": "string"
+    },
+    "hero_cta_text": {
+      "type": "string"
+    },
+    "hero_subtext": {
+      "type": "string"
+    },
+    "steps_header": {
+      "type": "string"
+    },
+    "steps_description": {
+      "type": "string"
+    },
+    "step_1": {
+      "displayName": "How it Works Step",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.how-it-works-step"
+    },
+    "step_2": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.how-it-works-step"
+    },
+    "step_3": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.how-it-works-step"
+    },
+    "apply_header": {
+      "type": "string"
+    },
+    "apply_description": {
+      "type": "string"
+    },
+    "apply_overview_1": {
+      "type": "string"
+    },
+    "apply_overview_2": {
+      "type": "string"
+    },
+    "apply_overview_3": {
+      "type": "string"
+    },
+    "apply_list_header": {
+      "type": "string"
+    },
+    "apply_bullet": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.benefits-list"
+    },
+    "apply_cta_text": {
+      "type": "string"
+    },
+    "apply_subtext": {
+      "type": "string"
+    }
+  }
+}

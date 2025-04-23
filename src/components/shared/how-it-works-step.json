@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_how_it_works_steps",
+  "info": {
+    "displayName": "How it Works Step"
+  },
+  "options": {},
+  "attributes": {
+    "step_title": {
+      "type": "string"
+    },
+    "step_header": {
+      "type": "string"
+    },
+    "step_description": {
+      "type": "string"
+    }
+  }
+}

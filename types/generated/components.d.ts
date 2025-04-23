@@ -12,6 +12,56 @@ export interface SharedBenefitsList extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedEligibilityBullet extends Struct.ComponentSchema {
+  collectionName: 'components_shared_eligibility_bullets';
+  info: {
+    description: '';
+    displayName: 'Eligibility Bullet';
+  };
+  attributes: {
+    sub_bullet: Schema.Attribute.Component<
+      'shared.eligibility-sub-bullet',
+      true
+    >;
+    text: Schema.Attribute.String;
+  };
+}
+
+export interface SharedEligibilitySection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_eligibility_sections';
+  info: {
+    description: '';
+    displayName: 'Eligibility Section';
+  };
+  attributes: {
+    bullet: Schema.Attribute.Component<'shared.eligibility-bullet', true>;
+    header: Schema.Attribute.String;
+    positive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    subtext: Schema.Attribute.String;
+  };
+}
+
+export interface SharedEligibilitySubBullet extends Struct.ComponentSchema {
+  collectionName: 'components_shared_eligibility_sub_bullets';
+  info: {
+    displayName: 'Eligibility Sub Bullet';
+  };
+  attributes: {
+    text: Schema.Attribute.String;
+  };
+}
+
+export interface SharedExternalLink extends Struct.ComponentSchema {
+  collectionName: 'components_shared_external_links';
+  info: {
+    displayName: 'External Link';
+  };
+  attributes: {
+    text: Schema.Attribute.String;
+    URL: Schema.Attribute.String;
+  };
+}
+
 export interface SharedFaqEntry extends Struct.ComponentSchema {
   collectionName: 'components_shared_faq_entries';
   info: {
@@ -35,6 +85,16 @@ export interface SharedFeatureCard extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedFooterLinkGroup extends Struct.ComponentSchema {
+  collectionName: 'components_shared_footer_link_groups';
+  info: {
+    displayName: 'Footer Link Group';
+  };
+  attributes: {
+    link: Schema.Attribute.Component<'shared.link', true>;
+  };
+}
+
 export interface SharedHero extends Struct.ComponentSchema {
   collectionName: 'components_shared_heroes';
   info: {
@@ -52,15 +112,42 @@ export interface SharedHero extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedHowItWorksStep extends Struct.ComponentSchema {
+  collectionName: 'components_shared_how_it_works_steps';
+  info: {
+    displayName: 'How it Works Step';
+  };
+  attributes: {
+    step_description: Schema.Attribute.String;
+    step_header: Schema.Attribute.String;
+    step_title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedLink extends Struct.ComponentSchema {
   collectionName: 'components_shared_links';
   info: {
+    description: '';
     displayName: 'Link';
     icon: 'globe';
   };
   attributes: {
+    internal_url: Schema.Attribute.Enumeration<
+      [
+        'home',
+        'about-us',
+        'eligibility',
+        'credit-cards',
+        'how-it-works',
+        'resources',
+        'faq',
+        'contact-us',
+        'application',
+        'privacy-policy',
+        'terms-of-use',
+      ]
+    >;
     Text: Schema.Attribute.String;
-    URL: Schema.Attribute.String;
   };
 }
 
@@ -75,6 +162,18 @@ export interface SharedMedia extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedMetricCard extends Struct.ComponentSchema {
+  collectionName: 'components_shared_metric_cards';
+  info: {
+    displayName: 'Metric Card';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    header: Schema.Attribute.String;
+    metric: Schema.Attribute.String;
+  };
+}
+
 export interface SharedQuote extends Struct.ComponentSchema {
   collectionName: 'components_shared_quotes';
   info: {
@@ -84,6 +183,18 @@ export interface SharedQuote extends Struct.ComponentSchema {
   attributes: {
     body: Schema.Attribute.Text;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedResourceCard extends Struct.ComponentSchema {
+  collectionName: 'components_shared_resource_cards';
+  info: {
+    displayName: 'Resource Card';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    header: Schema.Attribute.String;
+    link: Schema.Attribute.Component<'shared.external-link', false>;
   };
 }
 
@@ -145,12 +256,20 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'shared.benefits-list': SharedBenefitsList;
+      'shared.eligibility-bullet': SharedEligibilityBullet;
+      'shared.eligibility-section': SharedEligibilitySection;
+      'shared.eligibility-sub-bullet': SharedEligibilitySubBullet;
+      'shared.external-link': SharedExternalLink;
       'shared.faq-entry': SharedFaqEntry;
       'shared.feature-card': SharedFeatureCard;
+      'shared.footer-link-group': SharedFooterLinkGroup;
       'shared.hero': SharedHero;
+      'shared.how-it-works-step': SharedHowItWorksStep;
       'shared.link': SharedLink;
       'shared.media': SharedMedia;
+      'shared.metric-card': SharedMetricCard;
       'shared.quote': SharedQuote;
+      'shared.resource-card': SharedResourceCard;
       'shared.rich-text': SharedRichText;
       'shared.section': SharedSection;
       'shared.seo': SharedSeo;
