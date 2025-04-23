@@ -1001,6 +1001,55 @@ export interface ApiPageHomePageHome extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiPageHowItWorksPageHowItWorks
+  extends Struct.SingleTypeSchema {
+  collectionName: 'page_how_it_workses';
+  info: {
+    description: '';
+    displayName: 'Page - How it Works';
+    pluralName: 'page-how-it-workses';
+    singularName: 'page-how-it-works';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    apply_bullet: Schema.Attribute.Component<'shared.benefits-list', true>;
+    apply_cta_text: Schema.Attribute.String;
+    apply_description: Schema.Attribute.String;
+    apply_header: Schema.Attribute.String;
+    apply_list_header: Schema.Attribute.String;
+    apply_overview_1: Schema.Attribute.String;
+    apply_overview_2: Schema.Attribute.String;
+    apply_overview_3: Schema.Attribute.String;
+    apply_subtext: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero_card_description: Schema.Attribute.String;
+    hero_card_header: Schema.Attribute.String;
+    hero_cta_text: Schema.Attribute.String;
+    hero_description: Schema.Attribute.String;
+    hero_header: Schema.Attribute.String;
+    hero_subtext: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::page-how-it-works.page-how-it-works'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    step_1: Schema.Attribute.Component<'shared.how-it-works-step', false>;
+    step_2: Schema.Attribute.Component<'shared.how-it-works-step', true>;
+    step_3: Schema.Attribute.Component<'shared.how-it-works-step', true>;
+    steps_description: Schema.Attribute.String;
+    steps_header: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiSectionCompareToCcSectionCompareToCc
   extends Struct.SingleTypeSchema {
   collectionName: 'section_compare_to_ccs';
@@ -1122,7 +1171,7 @@ export interface ApiSectionFooterSectionFooter extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     facebook_url: Schema.Attribute.String;
     instagram_url: Schema.Attribute.String;
-    legal_text: Schema.Attribute.RichText;
+    legal_text: Schema.Attribute.Blocks;
     linkedin_url: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -1742,6 +1791,7 @@ declare module '@strapi/strapi' {
       'api::page-credit-card.page-credit-card': ApiPageCreditCardPageCreditCard;
       'api::page-eligibility.page-eligibility': ApiPageEligibilityPageEligibility;
       'api::page-home.page-home': ApiPageHomePageHome;
+      'api::page-how-it-works.page-how-it-works': ApiPageHowItWorksPageHowItWorks;
       'api::section-compare-to-cc.section-compare-to-cc': ApiSectionCompareToCcSectionCompareToCc;
       'api::section-estimate-payment.section-estimate-payment': ApiSectionEstimatePaymentSectionEstimatePayment;
       'api::section-faq.section-faq': ApiSectionFaqSectionFaq;

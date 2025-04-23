@@ -46,7 +46,7 @@
       "type": "string"
     },
     "legal_text": {
-      "type": "richtext"
+      "type": "blocks"
     }
   }
 }

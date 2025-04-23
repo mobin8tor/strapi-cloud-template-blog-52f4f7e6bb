@@ -101,6 +101,18 @@ export interface SharedHero extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedHowItWorksStep extends Struct.ComponentSchema {
+  collectionName: 'components_shared_how_it_works_steps';
+  info: {
+    displayName: 'How it Works Step';
+  };
+  attributes: {
+    step_description: Schema.Attribute.String;
+    step_header: Schema.Attribute.String;
+    step_title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedLink extends Struct.ComponentSchema {
   collectionName: 'components_shared_links';
   info: {
@@ -228,6 +240,7 @@ declare module '@strapi/strapi' {
       'shared.feature-card': SharedFeatureCard;
       'shared.footer-link-group': SharedFooterLinkGroup;
       'shared.hero': SharedHero;
+      'shared.how-it-works-step': SharedHowItWorksStep;
       'shared.link': SharedLink;
       'shared.media': SharedMedia;
       'shared.metric-card': SharedMetricCard;
