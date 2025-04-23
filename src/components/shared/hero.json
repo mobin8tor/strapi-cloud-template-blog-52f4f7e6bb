@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_heroes",
+  "info": {
+    "displayName": "Hero",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "subheader": {
+      "type": "string"
+    },
+    "primary_button_text": {
+      "type": "string"
+    },
+    "callout_header": {
+      "type": "string"
+    },
+    "callout_text": {
+      "type": "string"
+    },
+    "description_one": {
+      "type": "string"
+    },
+    "description_two": {
+      "type": "string"
+    }
+  }
+}

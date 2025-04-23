@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "section_compare_to_ccs",
+  "info": {
+    "singularName": "section-compare-to-cc",
+    "pluralName": "section-compare-to-ccs",
+    "displayName": "Section - Compare to CC",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "subheader": {
+      "type": "string"
+    },
+    "primary_button_text": {
+      "type": "string"
+    },
+    "primary_button_subtext": {
+      "type": "string"
+    }
+  }
+}

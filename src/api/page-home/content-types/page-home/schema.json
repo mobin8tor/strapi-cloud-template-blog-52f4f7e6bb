@@ -1,0 +1,46 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_homes",
+  "info": {
+    "singularName": "page-home",
+    "pluralName": "page-homes",
+    "displayName": "Page - Home",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.hero"
+    },
+    "hero_feature_cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.feature-card"
+    },
+    "no_credit": {
+      "displayName": "Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.section"
+    },
+    "credit_confidence": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.section"
+    },
+    "flexible_loan": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.section"
+    },
+    "pay_early": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.section"
+    }
+  }
+}

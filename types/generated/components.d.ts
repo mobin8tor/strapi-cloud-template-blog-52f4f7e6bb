@@ -1,5 +1,17 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedBenefitsList extends Struct.ComponentSchema {
+  collectionName: 'components_shared_benefits_lists';
+  info: {
+    description: '';
+    displayName: 'Benefit';
+  };
+  attributes: {
+    subtext: Schema.Attribute.String;
+    text: Schema.Attribute.String;
+  };
+}
+
 export interface SharedFaqEntry extends Struct.ComponentSchema {
   collectionName: 'components_shared_faq_entries';
   info: {
@@ -9,6 +21,34 @@ export interface SharedFaqEntry extends Struct.ComponentSchema {
   attributes: {
     answer: Schema.Attribute.Text;
     question: Schema.Attribute.String;
+  };
+}
+
+export interface SharedFeatureCard extends Struct.ComponentSchema {
+  collectionName: 'components_shared_feature_cards';
+  info: {
+    displayName: 'Feature card';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    header: Schema.Attribute.String;
+  };
+}
+
+export interface SharedHero extends Struct.ComponentSchema {
+  collectionName: 'components_shared_heroes';
+  info: {
+    description: '';
+    displayName: 'Hero';
+  };
+  attributes: {
+    callout_header: Schema.Attribute.String;
+    callout_text: Schema.Attribute.String;
+    description_one: Schema.Attribute.String;
+    description_two: Schema.Attribute.String;
+    header: Schema.Attribute.String;
+    primary_button_text: Schema.Attribute.String;
+    subheader: Schema.Attribute.String;
   };
 }
 
@@ -59,6 +99,21 @@ export interface SharedRichText extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_sections';
+  info: {
+    description: '';
+    displayName: 'Benefits Section';
+  };
+  attributes: {
+    benefits: Schema.Attribute.Component<'shared.benefits-list', true>;
+    description: Schema.Attribute.String;
+    header: Schema.Attribute.String;
+    primary_button_text: Schema.Attribute.String;
+    subheader: Schema.Attribute.String;
+  };
+}
+
 export interface SharedSeo extends Struct.ComponentSchema {
   collectionName: 'components_shared_seos';
   info: {
@@ -89,11 +144,15 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'shared.benefits-list': SharedBenefitsList;
       'shared.faq-entry': SharedFaqEntry;
+      'shared.feature-card': SharedFeatureCard;
+      'shared.hero': SharedHero;
       'shared.link': SharedLink;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
+      'shared.section': SharedSection;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
     }

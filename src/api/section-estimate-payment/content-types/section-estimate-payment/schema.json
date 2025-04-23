@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "section_estimate_payments",
+  "info": {
+    "singularName": "section-estimate-payment",
+    "pluralName": "section-estimate-payments",
+    "displayName": "Section - Estimate Payment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "subheader": {
+      "type": "string"
+    },
+    "primary_button_text": {
+      "type": "string"
+    },
+    "primary_button_subtext": {
+      "type": "string"
+    }
+  }
+}

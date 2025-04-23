@@ -854,6 +854,106 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiPageHomePageHome extends Struct.SingleTypeSchema {
+  collectionName: 'page_homes';
+  info: {
+    description: '';
+    displayName: 'Page - Home';
+    pluralName: 'page-homes';
+    singularName: 'page-home';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    credit_confidence: Schema.Attribute.Component<'shared.section', false>;
+    flexible_loan: Schema.Attribute.Component<'shared.section', false>;
+    hero: Schema.Attribute.Component<'shared.hero', false>;
+    hero_feature_cards: Schema.Attribute.Component<'shared.feature-card', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::page-home.page-home'
+    > &
+      Schema.Attribute.Private;
+    no_credit: Schema.Attribute.Component<'shared.section', false>;
+    pay_early: Schema.Attribute.Component<'shared.section', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSectionCompareToCcSectionCompareToCc
+  extends Struct.SingleTypeSchema {
+  collectionName: 'section_compare_to_ccs';
+  info: {
+    description: '';
+    displayName: 'Section - Compare to CC';
+    pluralName: 'section-compare-to-ccs';
+    singularName: 'section-compare-to-cc';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::section-compare-to-cc.section-compare-to-cc'
+    > &
+      Schema.Attribute.Private;
+    primary_button_subtext: Schema.Attribute.String;
+    primary_button_text: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    subheader: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSectionEstimatePaymentSectionEstimatePayment
+  extends Struct.SingleTypeSchema {
+  collectionName: 'section_estimate_payments';
+  info: {
+    description: '';
+    displayName: 'Section - Estimate Payment';
+    pluralName: 'section-estimate-payments';
+    singularName: 'section-estimate-payment';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::section-estimate-payment.section-estimate-payment'
+    > &
+      Schema.Attribute.Private;
+    primary_button_subtext: Schema.Attribute.String;
+    primary_button_text: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    subheader: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiSectionFaqSectionFaq extends Struct.SingleTypeSchema {
   collectionName: 'section_faqs';
   info: {
@@ -915,6 +1015,43 @@ export interface ApiSectionGetStartedSectionGetStarted
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     subheading: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSectionLoanStepSectionLoanStep
+  extends Struct.SingleTypeSchema {
+  collectionName: 'section_loan_steps';
+  info: {
+    description: '';
+    displayName: 'Section - Loan Step';
+    pluralName: 'section-loan-steps';
+    singularName: 'section-loan-step';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    header: Schema.Attribute.String;
+    learn_more_link_text: Schema.Attribute.String;
+    learn_more_text: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::section-loan-step.section-loan-step'
+    > &
+      Schema.Attribute.Private;
+    primary_button_subtext: Schema.Attribute.String;
+    primary_button_text: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    step_one_text: Schema.Attribute.String;
+    step_three_text: Schema.Attribute.String;
+    step_two_text: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1444,8 +1581,12 @@ declare module '@strapi/strapi' {
       'api::eligibility-visa-type.eligibility-visa-type': ApiEligibilityVisaTypeEligibilityVisaType;
       'api::eligibility-work-auth.eligibility-work-auth': ApiEligibilityWorkAuthEligibilityWorkAuth;
       'api::global.global': ApiGlobalGlobal;
+      'api::page-home.page-home': ApiPageHomePageHome;
+      'api::section-compare-to-cc.section-compare-to-cc': ApiSectionCompareToCcSectionCompareToCc;
+      'api::section-estimate-payment.section-estimate-payment': ApiSectionEstimatePaymentSectionEstimatePayment;
       'api::section-faq.section-faq': ApiSectionFaqSectionFaq;
       'api::section-get-started.section-get-started': ApiSectionGetStartedSectionGetStarted;
+      'api::section-loan-step.section-loan-step': ApiSectionLoanStepSectionLoanStep;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
