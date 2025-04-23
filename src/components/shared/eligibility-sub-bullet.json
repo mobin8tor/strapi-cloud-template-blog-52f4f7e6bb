@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_shared_eligibility_sub_bullets",
+  "info": {
+    "displayName": "Eligibility Sub Bullet"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  }
+}

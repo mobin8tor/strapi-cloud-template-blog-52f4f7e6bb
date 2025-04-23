@@ -1,0 +1,51 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_eligibilities",
+  "info": {
+    "singularName": "page-eligibility",
+    "pluralName": "page-eligibilities",
+    "displayName": "Page - Eligibility",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "hero_header": {
+      "type": "string"
+    },
+    "hero_description": {
+      "type": "string"
+    },
+    "hero_cta_text": {
+      "type": "string"
+    },
+    "hero_subtext": {
+      "type": "string"
+    },
+    "check_header": {
+      "type": "string"
+    },
+    "check_description": {
+      "type": "string"
+    },
+    "check_section": {
+      "displayName": "Eligibility Section",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.eligibility-section"
+    },
+    "qualify_header": {
+      "type": "string"
+    },
+    "qualify_description": {
+      "type": "string"
+    },
+    "qualify_cta_text": {
+      "type": "string"
+    },
+    "qualify_subtext": {
+      "type": "string"
+    }
+  }
+}

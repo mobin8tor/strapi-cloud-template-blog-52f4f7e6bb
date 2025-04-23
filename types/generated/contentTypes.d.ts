@@ -889,6 +889,49 @@ export interface ApiPageAboutUsPageAboutUs extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiPageEligibilityPageEligibility
+  extends Struct.SingleTypeSchema {
+  collectionName: 'page_eligibilities';
+  info: {
+    description: '';
+    displayName: 'Page - Eligibility';
+    pluralName: 'page-eligibilities';
+    singularName: 'page-eligibility';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    check_description: Schema.Attribute.String;
+    check_header: Schema.Attribute.String;
+    check_section: Schema.Attribute.Component<
+      'shared.eligibility-section',
+      true
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero_cta_text: Schema.Attribute.String;
+    hero_description: Schema.Attribute.String;
+    hero_header: Schema.Attribute.String;
+    hero_subtext: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::page-eligibility.page-eligibility'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    qualify_cta_text: Schema.Attribute.String;
+    qualify_description: Schema.Attribute.String;
+    qualify_header: Schema.Attribute.String;
+    qualify_subtext: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPageHomePageHome extends Struct.SingleTypeSchema {
   collectionName: 'page_homes';
   info: {
@@ -1661,6 +1704,7 @@ declare module '@strapi/strapi' {
       'api::eligibility-work-auth.eligibility-work-auth': ApiEligibilityWorkAuthEligibilityWorkAuth;
       'api::global.global': ApiGlobalGlobal;
       'api::page-about-us.page-about-us': ApiPageAboutUsPageAboutUs;
+      'api::page-eligibility.page-eligibility': ApiPageEligibilityPageEligibility;
       'api::page-home.page-home': ApiPageHomePageHome;
       'api::section-compare-to-cc.section-compare-to-cc': ApiSectionCompareToCcSectionCompareToCc;
       'api::section-estimate-payment.section-estimate-payment': ApiSectionEstimatePaymentSectionEstimatePayment;

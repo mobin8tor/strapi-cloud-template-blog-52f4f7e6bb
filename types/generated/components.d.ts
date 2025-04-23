@@ -12,6 +12,45 @@ export interface SharedBenefitsList extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedEligibilityBullet extends Struct.ComponentSchema {
+  collectionName: 'components_shared_eligibility_bullets';
+  info: {
+    description: '';
+    displayName: 'Eligibility Bullet';
+  };
+  attributes: {
+    sub_bullet: Schema.Attribute.Component<
+      'shared.eligibility-sub-bullet',
+      true
+    >;
+    text: Schema.Attribute.String;
+  };
+}
+
+export interface SharedEligibilitySection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_eligibility_sections';
+  info: {
+    description: '';
+    displayName: 'Eligibility Section';
+  };
+  attributes: {
+    bullet: Schema.Attribute.Component<'shared.eligibility-bullet', true>;
+    header: Schema.Attribute.String;
+    positive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    subtext: Schema.Attribute.String;
+  };
+}
+
+export interface SharedEligibilitySubBullet extends Struct.ComponentSchema {
+  collectionName: 'components_shared_eligibility_sub_bullets';
+  info: {
+    displayName: 'Eligibility Sub Bullet';
+  };
+  attributes: {
+    text: Schema.Attribute.String;
+  };
+}
+
 export interface SharedFaqEntry extends Struct.ComponentSchema {
   collectionName: 'components_shared_faq_entries';
   info: {
@@ -182,6 +221,9 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'shared.benefits-list': SharedBenefitsList;
+      'shared.eligibility-bullet': SharedEligibilityBullet;
+      'shared.eligibility-section': SharedEligibilitySection;
+      'shared.eligibility-sub-bullet': SharedEligibilitySubBullet;
       'shared.faq-entry': SharedFaqEntry;
       'shared.feature-card': SharedFeatureCard;
       'shared.footer-link-group': SharedFooterLinkGroup;
