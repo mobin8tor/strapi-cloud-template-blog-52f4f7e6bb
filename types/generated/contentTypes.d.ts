@@ -1026,7 +1026,6 @@ export interface ApiPageHowItWorksPageHowItWorks
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    credit_confidence: Schema.Attribute.Component<'shared.section', false>;
     hero_card_description: Schema.Attribute.String;
     hero_card_header: Schema.Attribute.String;
     hero_cta_text: Schema.Attribute.String;
@@ -1041,8 +1040,8 @@ export interface ApiPageHowItWorksPageHowItWorks
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     step_1: Schema.Attribute.Component<'shared.how-it-works-step', false>;
-    step_2: Schema.Attribute.Component<'shared.how-it-works-step', true>;
-    step_3: Schema.Attribute.Component<'shared.how-it-works-step', true>;
+    step_2: Schema.Attribute.Component<'shared.how-it-works-step', false>;
+    step_3: Schema.Attribute.Component<'shared.how-it-works-step', false>;
     steps_description: Schema.Attribute.String;
     steps_header: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
