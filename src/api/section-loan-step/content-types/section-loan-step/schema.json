@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "section_loan_steps",
+  "info": {
+    "singularName": "section-loan-step",
+    "pluralName": "section-loan-steps",
+    "displayName": "Section - Loan Step",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "step_one_text": {
+      "type": "string"
+    },
+    "step_two_text": {
+      "type": "string"
+    },
+    "step_three_text": {
+      "type": "string"
+    },
+    "primary_button_text": {
+      "type": "string"
+    },
+    "primary_button_subtext": {
+      "type": "string"
+    },
+    "learn_more_text": {
+      "type": "string"
+    },
+    "learn_more_link_text": {
+      "type": "string"
+    }
+  }
+}
