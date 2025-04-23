@@ -854,6 +854,37 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiPageAboutUsPageAboutUs extends Struct.SingleTypeSchema {
+  collectionName: 'page_about_uses';
+  info: {
+    displayName: 'Page - About Us';
+    pluralName: 'page-about-uses';
+    singularName: 'page-about-us';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    card_one: Schema.Attribute.Component<'shared.metric-card', false>;
+    card_two: Schema.Attribute.Component<'shared.metric-card', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.String;
+    header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::page-about-us.page-about-us'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPageHomePageHome extends Struct.SingleTypeSchema {
   collectionName: 'page_homes';
   info: {
@@ -1581,6 +1612,7 @@ declare module '@strapi/strapi' {
       'api::eligibility-visa-type.eligibility-visa-type': ApiEligibilityVisaTypeEligibilityVisaType;
       'api::eligibility-work-auth.eligibility-work-auth': ApiEligibilityWorkAuthEligibilityWorkAuth;
       'api::global.global': ApiGlobalGlobal;
+      'api::page-about-us.page-about-us': ApiPageAboutUsPageAboutUs;
       'api::page-home.page-home': ApiPageHomePageHome;
       'api::section-compare-to-cc.section-compare-to-cc': ApiSectionCompareToCcSectionCompareToCc;
       'api::section-estimate-payment.section-estimate-payment': ApiSectionEstimatePaymentSectionEstimatePayment;

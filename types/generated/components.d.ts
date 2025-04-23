@@ -75,6 +75,18 @@ export interface SharedMedia extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedMetricCard extends Struct.ComponentSchema {
+  collectionName: 'components_shared_metric_cards';
+  info: {
+    displayName: 'Metric Card';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    header: Schema.Attribute.String;
+    metric: Schema.Attribute.String;
+  };
+}
+
 export interface SharedQuote extends Struct.ComponentSchema {
   collectionName: 'components_shared_quotes';
   info: {
@@ -150,6 +162,7 @@ declare module '@strapi/strapi' {
       'shared.hero': SharedHero;
       'shared.link': SharedLink;
       'shared.media': SharedMedia;
+      'shared.metric-card': SharedMetricCard;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.section': SharedSection;
