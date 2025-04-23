@@ -857,6 +857,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
 export interface ApiPageAboutUsPageAboutUs extends Struct.SingleTypeSchema {
   collectionName: 'page_about_uses';
   info: {
+    description: '';
     displayName: 'Page - About Us';
     pluralName: 'page-about-uses';
     singularName: 'page-about-us';
@@ -878,7 +879,10 @@ export interface ApiPageAboutUsPageAboutUs extends Struct.SingleTypeSchema {
       'api::page-about-us.page-about-us'
     > &
       Schema.Attribute.Private;
+    our_commitment: Schema.Attribute.Component<'shared.section', false>;
     publishedAt: Schema.Attribute.DateTime;
+    solution: Schema.Attribute.Component<'shared.section', false>;
+    solution_card_header: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
