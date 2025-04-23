@@ -79,6 +79,11 @@
     },
     "apply_subtext": {
       "type": "string"
+    },
+    "credit_confidence": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.section"
     }
   }
 }
