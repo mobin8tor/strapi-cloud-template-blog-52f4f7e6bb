@@ -88,9 +88,11 @@ export interface SharedFeatureCard extends Struct.ComponentSchema {
 export interface SharedFooterLinkGroup extends Struct.ComponentSchema {
   collectionName: 'components_shared_footer_link_groups';
   info: {
+    description: '';
     displayName: 'Footer Link Group';
   };
   attributes: {
+    header: Schema.Attribute.String;
     link: Schema.Attribute.Component<'shared.link', true>;
   };
 }

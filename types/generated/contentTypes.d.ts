@@ -1194,16 +1194,15 @@ export interface ApiSectionFooterSectionFooter extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    company_links: Schema.Attribute.Component<
-      'shared.footer-link-group',
-      false
-    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     facebook_url: Schema.Attribute.String;
     instagram_url: Schema.Attribute.String;
     legal_text: Schema.Attribute.Blocks;
+    link_group_1: Schema.Attribute.Component<'shared.footer-link-group', false>;
+    link_group_2: Schema.Attribute.Component<'shared.footer-link-group', false>;
+    link_group_3: Schema.Attribute.Component<'shared.footer-link-group', true>;
     linkedin_url: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -1212,12 +1211,7 @@ export interface ApiSectionFooterSectionFooter extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     privacy_policy_label: Schema.Attribute.String;
-    product_links: Schema.Attribute.Component<
-      'shared.footer-link-group',
-      false
-    >;
     publishedAt: Schema.Attribute.DateTime;
-    support_links: Schema.Attribute.Component<'shared.footer-link-group', true>;
     terms_of_use_label: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
