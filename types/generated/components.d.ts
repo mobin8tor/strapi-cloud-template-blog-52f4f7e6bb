@@ -35,6 +35,16 @@ export interface SharedFeatureCard extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedFooterLinkGroup extends Struct.ComponentSchema {
+  collectionName: 'components_shared_footer_link_groups';
+  info: {
+    displayName: 'Footer Link Group';
+  };
+  attributes: {
+    link: Schema.Attribute.Component<'shared.link', true>;
+  };
+}
+
 export interface SharedHero extends Struct.ComponentSchema {
   collectionName: 'components_shared_heroes';
   info: {
@@ -55,12 +65,27 @@ export interface SharedHero extends Struct.ComponentSchema {
 export interface SharedLink extends Struct.ComponentSchema {
   collectionName: 'components_shared_links';
   info: {
+    description: '';
     displayName: 'Link';
     icon: 'globe';
   };
   attributes: {
+    internal_url: Schema.Attribute.Enumeration<
+      [
+        'home',
+        'about-us',
+        'eligibility',
+        'credit-cards',
+        'how-it-works',
+        'resources',
+        'faq',
+        'contact-us',
+        'application',
+        'privacy-policy',
+        'terms-of-use',
+      ]
+    >;
     Text: Schema.Attribute.String;
-    URL: Schema.Attribute.String;
   };
 }
 
@@ -159,6 +184,7 @@ declare module '@strapi/strapi' {
       'shared.benefits-list': SharedBenefitsList;
       'shared.faq-entry': SharedFaqEntry;
       'shared.feature-card': SharedFeatureCard;
+      'shared.footer-link-group': SharedFooterLinkGroup;
       'shared.hero': SharedHero;
       'shared.link': SharedLink;
       'shared.media': SharedMedia;

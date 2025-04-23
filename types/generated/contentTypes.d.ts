@@ -1023,6 +1023,50 @@ export interface ApiSectionFaqSectionFaq extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiSectionFooterSectionFooter extends Struct.SingleTypeSchema {
+  collectionName: 'section_footers';
+  info: {
+    description: '';
+    displayName: 'Section - Footer';
+    pluralName: 'section-footers';
+    singularName: 'section-footer';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    company_links: Schema.Attribute.Component<
+      'shared.footer-link-group',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    facebook_url: Schema.Attribute.String;
+    instagram_url: Schema.Attribute.String;
+    legal_text: Schema.Attribute.RichText;
+    linkedin_url: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::section-footer.section-footer'
+    > &
+      Schema.Attribute.Private;
+    privacy_policy_label: Schema.Attribute.String;
+    product_links: Schema.Attribute.Component<
+      'shared.footer-link-group',
+      false
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    support_links: Schema.Attribute.Component<'shared.footer-link-group', true>;
+    terms_of_use_label: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    x_url: Schema.Attribute.String;
+  };
+}
+
 export interface ApiSectionGetStartedSectionGetStarted
   extends Struct.SingleTypeSchema {
   collectionName: 'section_get_starteds';
@@ -1621,6 +1665,7 @@ declare module '@strapi/strapi' {
       'api::section-compare-to-cc.section-compare-to-cc': ApiSectionCompareToCcSectionCompareToCc;
       'api::section-estimate-payment.section-estimate-payment': ApiSectionEstimatePaymentSectionEstimatePayment;
       'api::section-faq.section-faq': ApiSectionFaqSectionFaq;
+      'api::section-footer.section-footer': ApiSectionFooterSectionFooter;
       'api::section-get-started.section-get-started': ApiSectionGetStartedSectionGetStarted;
       'api::section-loan-step.section-loan-step': ApiSectionLoanStepSectionLoanStep;
       'plugin::content-releases.release': PluginContentReleasesRelease;
