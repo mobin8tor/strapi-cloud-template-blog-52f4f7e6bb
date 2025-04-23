@@ -51,6 +51,17 @@ export interface SharedEligibilitySubBullet extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedExternalLink extends Struct.ComponentSchema {
+  collectionName: 'components_shared_external_links';
+  info: {
+    displayName: 'External Link';
+  };
+  attributes: {
+    text: Schema.Attribute.String;
+    URL: Schema.Attribute.String;
+  };
+}
+
 export interface SharedFaqEntry extends Struct.ComponentSchema {
   collectionName: 'components_shared_faq_entries';
   info: {
@@ -175,6 +186,18 @@ export interface SharedQuote extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedResourceCard extends Struct.ComponentSchema {
+  collectionName: 'components_shared_resource_cards';
+  info: {
+    displayName: 'Resource Card';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    header: Schema.Attribute.String;
+    link: Schema.Attribute.Component<'shared.external-link', false>;
+  };
+}
+
 export interface SharedRichText extends Struct.ComponentSchema {
   collectionName: 'components_shared_rich_texts';
   info: {
@@ -236,6 +259,7 @@ declare module '@strapi/strapi' {
       'shared.eligibility-bullet': SharedEligibilityBullet;
       'shared.eligibility-section': SharedEligibilitySection;
       'shared.eligibility-sub-bullet': SharedEligibilitySubBullet;
+      'shared.external-link': SharedExternalLink;
       'shared.faq-entry': SharedFaqEntry;
       'shared.feature-card': SharedFeatureCard;
       'shared.footer-link-group': SharedFooterLinkGroup;
@@ -245,6 +269,7 @@ declare module '@strapi/strapi' {
       'shared.media': SharedMedia;
       'shared.metric-card': SharedMetricCard;
       'shared.quote': SharedQuote;
+      'shared.resource-card': SharedResourceCard;
       'shared.rich-text': SharedRichText;
       'shared.section': SharedSection;
       'shared.seo': SharedSeo;

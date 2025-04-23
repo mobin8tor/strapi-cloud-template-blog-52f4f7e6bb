@@ -1050,6 +1050,38 @@ export interface ApiPageHowItWorksPageHowItWorks
   };
 }
 
+export interface ApiPageResourcesPageResources extends Struct.SingleTypeSchema {
+  collectionName: 'page_resourceses';
+  info: {
+    displayName: 'Page - Resources';
+    pluralName: 'page-resourceses';
+    singularName: 'page-resources';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero_description: Schema.Attribute.String;
+    hero_header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::page-resources.page-resources'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    resource_card_1: Schema.Attribute.Component<'shared.resource-card', false>;
+    resource_card_2: Schema.Attribute.Component<'shared.resource-card', true>;
+    resource_card_3: Schema.Attribute.Component<'shared.resource-card', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiSectionCompareToCcSectionCompareToCc
   extends Struct.SingleTypeSchema {
   collectionName: 'section_compare_to_ccs';
@@ -1792,6 +1824,7 @@ declare module '@strapi/strapi' {
       'api::page-eligibility.page-eligibility': ApiPageEligibilityPageEligibility;
       'api::page-home.page-home': ApiPageHomePageHome;
       'api::page-how-it-works.page-how-it-works': ApiPageHowItWorksPageHowItWorks;
+      'api::page-resources.page-resources': ApiPageResourcesPageResources;
       'api::section-compare-to-cc.section-compare-to-cc': ApiSectionCompareToCcSectionCompareToCc;
       'api::section-estimate-payment.section-estimate-payment': ApiSectionEstimatePaymentSectionEstimatePayment;
       'api::section-faq.section-faq': ApiSectionFaqSectionFaq;
