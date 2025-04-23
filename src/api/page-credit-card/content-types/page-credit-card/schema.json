@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_credit_cards",
+  "info": {
+    "singularName": "page-credit-card",
+    "pluralName": "page-credit-cards",
+    "displayName": "Page - Credit Card"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "stinger_text": {
+      "type": "string"
+    },
+    "header": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "sign_up_text": {
+      "type": "string"
+    },
+    "email_placeholder": {
+      "type": "string"
+    },
+    "sign_up_cta_text": {
+      "type": "string"
+    },
+    "sign_up_subtext": {
+      "type": "string"
+    }
+  }
+}

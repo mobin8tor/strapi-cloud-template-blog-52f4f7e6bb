@@ -889,6 +889,41 @@ export interface ApiPageAboutUsPageAboutUs extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiPageCreditCardPageCreditCard
+  extends Struct.SingleTypeSchema {
+  collectionName: 'page_credit_cards';
+  info: {
+    displayName: 'Page - Credit Card';
+    pluralName: 'page-credit-cards';
+    singularName: 'page-credit-card';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.String;
+    email_placeholder: Schema.Attribute.String;
+    header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::page-credit-card.page-credit-card'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    sign_up_cta_text: Schema.Attribute.String;
+    sign_up_subtext: Schema.Attribute.String;
+    sign_up_text: Schema.Attribute.String;
+    stinger_text: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPageEligibilityPageEligibility
   extends Struct.SingleTypeSchema {
   collectionName: 'page_eligibilities';
@@ -1704,6 +1739,7 @@ declare module '@strapi/strapi' {
       'api::eligibility-work-auth.eligibility-work-auth': ApiEligibilityWorkAuthEligibilityWorkAuth;
       'api::global.global': ApiGlobalGlobal;
       'api::page-about-us.page-about-us': ApiPageAboutUsPageAboutUs;
+      'api::page-credit-card.page-credit-card': ApiPageCreditCardPageCreditCard;
       'api::page-eligibility.page-eligibility': ApiPageEligibilityPageEligibility;
       'api::page-home.page-home': ApiPageHomePageHome;
       'api::section-compare-to-cc.section-compare-to-cc': ApiSectionCompareToCcSectionCompareToCc;
