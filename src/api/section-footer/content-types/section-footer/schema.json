@@ -36,7 +36,7 @@
     },
     "link_group_3": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "shared.footer-link-group"
     },
     "privacy_policy_label": {

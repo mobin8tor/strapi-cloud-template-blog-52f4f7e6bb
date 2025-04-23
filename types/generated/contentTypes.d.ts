@@ -1202,7 +1202,7 @@ export interface ApiSectionFooterSectionFooter extends Struct.SingleTypeSchema {
     legal_text: Schema.Attribute.Blocks;
     link_group_1: Schema.Attribute.Component<'shared.footer-link-group', false>;
     link_group_2: Schema.Attribute.Component<'shared.footer-link-group', false>;
-    link_group_3: Schema.Attribute.Component<'shared.footer-link-group', true>;
+    link_group_3: Schema.Attribute.Component<'shared.footer-link-group', false>;
     linkedin_url: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
