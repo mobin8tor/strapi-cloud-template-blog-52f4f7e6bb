@@ -854,6 +854,40 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiPageHomePageHome extends Struct.SingleTypeSchema {
+  collectionName: 'page_homes';
+  info: {
+    description: '';
+    displayName: 'Page - Home';
+    pluralName: 'page-homes';
+    singularName: 'page-home';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    credit_confidence: Schema.Attribute.Component<'shared.section', false>;
+    flexible_loan: Schema.Attribute.Component<'shared.section', false>;
+    hero: Schema.Attribute.Component<'shared.hero', false>;
+    hero_feature_cards: Schema.Attribute.Component<'shared.feature-card', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::page-home.page-home'
+    > &
+      Schema.Attribute.Private;
+    no_credit: Schema.Attribute.Component<'shared.section', false>;
+    pay_early: Schema.Attribute.Component<'shared.section', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiSectionFaqSectionFaq extends Struct.SingleTypeSchema {
   collectionName: 'section_faqs';
   info: {
@@ -1444,6 +1478,7 @@ declare module '@strapi/strapi' {
       'api::eligibility-visa-type.eligibility-visa-type': ApiEligibilityVisaTypeEligibilityVisaType;
       'api::eligibility-work-auth.eligibility-work-auth': ApiEligibilityWorkAuthEligibilityWorkAuth;
       'api::global.global': ApiGlobalGlobal;
+      'api::page-home.page-home': ApiPageHomePageHome;
       'api::section-faq.section-faq': ApiSectionFaqSectionFaq;
       'api::section-get-started.section-get-started': ApiSectionGetStartedSectionGetStarted;
       'plugin::content-releases.release': PluginContentReleasesRelease;

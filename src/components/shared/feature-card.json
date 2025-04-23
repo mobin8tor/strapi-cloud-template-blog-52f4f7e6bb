@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_feature_cards",
+  "info": {
+    "displayName": "Feature card"
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

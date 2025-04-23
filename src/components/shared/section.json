@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_shared_sections",
+  "info": {
+    "displayName": "Benefits Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "subheader": {
+      "type": "string"
+    },
+    "benefits": {
+      "displayName": "Benefits List",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.benefits-list"
+    },
+    "primary_button_text": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}
