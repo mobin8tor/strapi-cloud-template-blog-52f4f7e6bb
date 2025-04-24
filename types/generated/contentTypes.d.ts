@@ -1023,6 +1023,7 @@ export interface ApiPageHowItWorksPageHowItWorks
     apply_overview_2: Schema.Attribute.String;
     apply_overview_3: Schema.Attribute.String;
     apply_subtext: Schema.Attribute.String;
+    comparison_table_header: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

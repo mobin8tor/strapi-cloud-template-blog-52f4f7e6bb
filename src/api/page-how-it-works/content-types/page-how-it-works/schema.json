@@ -90,6 +90,9 @@
     },
     "steps_subtext": {
       "type": "string"
+    },
+    "comparison_table_header": {
+      "type": "string"
     }
   }
 }
