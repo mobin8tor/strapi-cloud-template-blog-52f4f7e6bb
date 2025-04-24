@@ -15,13 +15,6 @@
       "repeatable": true,
       "component": "shared.eligibility-bullet"
     },
-    "subtext": {
-      "type": "string"
-    },
-    "positive": {
-      "type": "boolean",
-      "default": true
-    },
     "header_icon": {
       "type": "string"
     }

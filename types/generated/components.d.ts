@@ -19,10 +19,12 @@ export interface SharedEligibilityBullet extends Struct.ComponentSchema {
     displayName: 'Eligibility Bullet';
   };
   attributes: {
+    negative: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     sub_bullet: Schema.Attribute.Component<
       'shared.eligibility-sub-bullet',
       true
     >;
+    subtext: Schema.Attribute.String;
     text: Schema.Attribute.String;
   };
 }
@@ -37,8 +39,6 @@ export interface SharedEligibilitySection extends Struct.ComponentSchema {
     bullet: Schema.Attribute.Component<'shared.eligibility-bullet', true>;
     header: Schema.Attribute.String;
     header_icon: Schema.Attribute.String;
-    positive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
-    subtext: Schema.Attribute.String;
   };
 }
 
