@@ -1087,6 +1087,7 @@ export interface ApiPageHowItWorksPageHowItWorks
 export interface ApiPageResourcesPageResources extends Struct.SingleTypeSchema {
   collectionName: 'page_resourceses';
   info: {
+    description: '';
     displayName: 'Page - Resources';
     pluralName: 'page-resourceses';
     singularName: 'page-resources';
@@ -1108,7 +1109,7 @@ export interface ApiPageResourcesPageResources extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     resource_card_1: Schema.Attribute.Component<'shared.resource-card', false>;
-    resource_card_2: Schema.Attribute.Component<'shared.resource-card', true>;
+    resource_card_2: Schema.Attribute.Component<'shared.resource-card', false>;
     resource_card_3: Schema.Attribute.Component<'shared.resource-card', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
