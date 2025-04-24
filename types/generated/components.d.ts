@@ -36,6 +36,7 @@ export interface SharedEligibilitySection extends Struct.ComponentSchema {
   attributes: {
     bullet: Schema.Attribute.Component<'shared.eligibility-bullet', true>;
     header: Schema.Attribute.String;
+    header_icon: Schema.Attribute.String;
     positive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     subtext: Schema.Attribute.String;
   };

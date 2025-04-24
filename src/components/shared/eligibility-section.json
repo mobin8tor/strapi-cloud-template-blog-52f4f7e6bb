@@ -21,6 +21,9 @@
     "positive": {
       "type": "boolean",
       "default": true
+    },
+    "header_icon": {
+      "type": "string"
     }
   }
 }
