@@ -967,6 +967,36 @@ export interface ApiPageEligibilityPageEligibility
   };
 }
 
+export interface ApiPageFaqPageFaq extends Struct.SingleTypeSchema {
+  collectionName: 'page_faqs';
+  info: {
+    displayName: 'Page - FAQ';
+    pluralName: 'page-faqs';
+    singularName: 'page-faq';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    cta_text: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::page-faq.page-faq'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPageHomePageHome extends Struct.SingleTypeSchema {
   collectionName: 'page_homes';
   info: {
@@ -1820,6 +1850,7 @@ declare module '@strapi/strapi' {
       'api::page-about-us.page-about-us': ApiPageAboutUsPageAboutUs;
       'api::page-credit-card.page-credit-card': ApiPageCreditCardPageCreditCard;
       'api::page-eligibility.page-eligibility': ApiPageEligibilityPageEligibility;
+      'api::page-faq.page-faq': ApiPageFaqPageFaq;
       'api::page-home.page-home': ApiPageHomePageHome;
       'api::page-how-it-works.page-how-it-works': ApiPageHowItWorksPageHowItWorks;
       'api::page-resources.page-resources': ApiPageResourcesPageResources;

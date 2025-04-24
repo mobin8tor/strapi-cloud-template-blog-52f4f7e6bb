@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_faqs",
+  "info": {
+    "singularName": "page-faq",
+    "pluralName": "page-faqs",
+    "displayName": "Page - FAQ"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "cta_text": {
+      "type": "string"
+    }
+  }
+}
