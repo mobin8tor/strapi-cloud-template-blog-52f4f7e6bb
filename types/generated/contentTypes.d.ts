@@ -1043,8 +1043,10 @@ export interface ApiPageHowItWorksPageHowItWorks
     step_1: Schema.Attribute.Component<'shared.how-it-works-step', false>;
     step_2: Schema.Attribute.Component<'shared.how-it-works-step', false>;
     step_3: Schema.Attribute.Component<'shared.how-it-works-step', false>;
+    steps_cta_text: Schema.Attribute.String;
     steps_description: Schema.Attribute.String;
     steps_header: Schema.Attribute.String;
+    steps_subtext: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

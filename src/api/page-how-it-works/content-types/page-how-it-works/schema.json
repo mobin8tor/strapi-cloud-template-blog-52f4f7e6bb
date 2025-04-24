@@ -84,6 +84,12 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.section"
+    },
+    "steps_cta_text": {
+      "type": "string"
+    },
+    "steps_subtext": {
+      "type": "string"
     }
   }
 }
