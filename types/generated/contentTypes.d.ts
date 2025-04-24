@@ -1026,6 +1026,7 @@ export interface ApiPageHowItWorksPageHowItWorks
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    credit_confidence: Schema.Attribute.Component<'shared.section', false>;
     hero_card_description: Schema.Attribute.String;
     hero_card_header: Schema.Attribute.String;
     hero_cta_text: Schema.Attribute.String;
