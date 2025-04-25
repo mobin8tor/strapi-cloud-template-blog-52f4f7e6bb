@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_blog_lists",
+  "info": {
+    "singularName": "page-blog-list",
+    "pluralName": "page-blog-lists",
+    "displayName": "Page - Blog List"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

@@ -889,6 +889,35 @@ export interface ApiPageAboutUsPageAboutUs extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiPageBlogListPageBlogList extends Struct.SingleTypeSchema {
+  collectionName: 'page_blog_lists';
+  info: {
+    displayName: 'Page - Blog List';
+    pluralName: 'page-blog-lists';
+    singularName: 'page-blog-list';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.String;
+    header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::page-blog-list.page-blog-list'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPageCreditCardPageCreditCard
   extends Struct.SingleTypeSchema {
   collectionName: 'page_credit_cards';
@@ -1849,6 +1878,7 @@ declare module '@strapi/strapi' {
       'api::eligibility-work-auth.eligibility-work-auth': ApiEligibilityWorkAuthEligibilityWorkAuth;
       'api::global.global': ApiGlobalGlobal;
       'api::page-about-us.page-about-us': ApiPageAboutUsPageAboutUs;
+      'api::page-blog-list.page-blog-list': ApiPageBlogListPageBlogList;
       'api::page-credit-card.page-credit-card': ApiPageCreditCardPageCreditCard;
       'api::page-eligibility.page-eligibility': ApiPageEligibilityPageEligibility;
       'api::page-faq.page-faq': ApiPageFaqPageFaq;
