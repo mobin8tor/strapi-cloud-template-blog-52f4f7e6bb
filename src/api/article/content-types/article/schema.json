@@ -15,10 +15,6 @@
     "title": {
       "type": "string"
     },
-    "description": {
-      "type": "text",
-      "maxLength": 80
-    },
     "slug": {
       "type": "uid",
       "targetField": "title"
@@ -32,18 +28,6 @@
         "files",
         "videos"
       ]
-    },
-    "author": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::author.author",
-      "inversedBy": "articles"
-    },
-    "category": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::category.category",
-      "inversedBy": "articles"
     },
     "content": {
       "type": "blocks"
