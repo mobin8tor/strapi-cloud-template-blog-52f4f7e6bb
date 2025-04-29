@@ -1,0 +1,17 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_terms_of_uses",
+  "info": {
+    "singularName": "page-terms-of-use",
+    "pluralName": "page-terms-of-uses",
+    "displayName": "Page - Terms of Use"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "content": {
+      "type": "blocks"
+    }
+  }
+}
