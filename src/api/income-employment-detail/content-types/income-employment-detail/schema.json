@@ -1,0 +1,78 @@
+{
+  "kind": "singleType",
+  "collectionName": "income_employment_details",
+  "info": {
+    "singularName": "income-employment-detail",
+    "pluralName": "income-employment-details",
+    "displayName": "Income - Employment Details",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "employed_header": {
+      "type": "string"
+    },
+    "company_name_label": {
+      "type": "string"
+    },
+    "job_title_label": {
+      "type": "string"
+    },
+    "job_type_label": {
+      "type": "string"
+    },
+    "full_time_label": {
+      "type": "string"
+    },
+    "part_time_label": {
+      "type": "string"
+    },
+    "seasonal_label": {
+      "type": "string"
+    },
+    "gross_annual_income_label": {
+      "type": "string"
+    },
+    "start_date_label": {
+      "type": "string"
+    },
+    "self_employed_header": {
+      "type": "string"
+    },
+    "self_employed_business_type_label": {
+      "type": "string"
+    },
+    "self_employed_payment_type_label": {
+      "type": "string"
+    },
+    "secondary_employment_header": {
+      "type": "string"
+    },
+    "secondary_employment_yes_label": {
+      "type": "string"
+    },
+    "secondary_employment_no_label": {
+      "type": "string"
+    },
+    "secondary_employment_details_header": {
+      "type": "string"
+    },
+    "self_employed_label": {
+      "type": "string"
+    },
+    "previous_employer_header": {
+      "type": "string"
+    },
+    "previous_employer_yes_label": {
+      "type": "string"
+    },
+    "previous_employer_no_label": {
+      "type": "string"
+    },
+    "previous_employer_subheader": {
+      "type": "string"
+    }
+  }
+}
