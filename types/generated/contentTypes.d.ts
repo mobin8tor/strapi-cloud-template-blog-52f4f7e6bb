@@ -1041,6 +1041,35 @@ export interface ApiPageHowItWorksPageHowItWorks
   };
 }
 
+export interface ApiPagePrivacyPolicyPagePrivacyPolicy
+  extends Struct.SingleTypeSchema {
+  collectionName: 'page_privacy_policies';
+  info: {
+    displayName: 'Page - Privacy Policy';
+    pluralName: 'page-privacy-policies';
+    singularName: 'page-privacy-policy';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    content: Schema.Attribute.Blocks;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::page-privacy-policy.page-privacy-policy'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPageResourcesPageResources extends Struct.SingleTypeSchema {
   collectionName: 'page_resourceses';
   info: {
@@ -1068,6 +1097,35 @@ export interface ApiPageResourcesPageResources extends Struct.SingleTypeSchema {
     resource_card_1: Schema.Attribute.Component<'shared.resource-card', false>;
     resource_card_2: Schema.Attribute.Component<'shared.resource-card', false>;
     resource_card_3: Schema.Attribute.Component<'shared.resource-card', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPageTermsOfUsePageTermsOfUse
+  extends Struct.SingleTypeSchema {
+  collectionName: 'page_terms_of_uses';
+  info: {
+    displayName: 'Page - Terms of Use';
+    pluralName: 'page-terms-of-uses';
+    singularName: 'page-terms-of-use';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    content: Schema.Attribute.Blocks;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::page-terms-of-use.page-terms-of-use'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1810,7 +1868,9 @@ declare module '@strapi/strapi' {
       'api::page-faq.page-faq': ApiPageFaqPageFaq;
       'api::page-home.page-home': ApiPageHomePageHome;
       'api::page-how-it-works.page-how-it-works': ApiPageHowItWorksPageHowItWorks;
+      'api::page-privacy-policy.page-privacy-policy': ApiPagePrivacyPolicyPagePrivacyPolicy;
       'api::page-resources.page-resources': ApiPageResourcesPageResources;
+      'api::page-terms-of-use.page-terms-of-use': ApiPageTermsOfUsePageTermsOfUse;
       'api::section-compare-to-cc.section-compare-to-cc': ApiSectionCompareToCcSectionCompareToCc;
       'api::section-estimate-payment.section-estimate-payment': ApiSectionEstimatePaymentSectionEstimatePayment;
       'api::section-faq.section-faq': ApiSectionFaqSectionFaq;

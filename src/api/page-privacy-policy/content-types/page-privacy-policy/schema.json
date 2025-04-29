@@ -1,0 +1,17 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_privacy_policies",
+  "info": {
+    "singularName": "page-privacy-policy",
+    "pluralName": "page-privacy-policies",
+    "displayName": "Page - Privacy Policy"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "content": {
+      "type": "blocks"
+    }
+  }
+}
