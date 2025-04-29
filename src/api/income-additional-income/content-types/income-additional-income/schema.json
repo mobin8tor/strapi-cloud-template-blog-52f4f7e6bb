@@ -1,0 +1,38 @@
+{
+  "kind": "singleType",
+  "collectionName": "income_additional_incomes",
+  "info": {
+    "singularName": "income-additional-income",
+    "pluralName": "income-additional-incomes",
+    "displayName": "Income - Additional Income"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "investment_income_label": {
+      "type": "string"
+    },
+    "pension_label": {
+      "type": "string"
+    },
+    "child_support_label": {
+      "type": "string"
+    },
+    "other_label": {
+      "type": "string"
+    },
+    "no_additional_income_label": {
+      "type": "string"
+    },
+    "amount_label": {
+      "type": "string"
+    },
+    "frequency_label": {
+      "type": "string"
+    }
+  }
+}

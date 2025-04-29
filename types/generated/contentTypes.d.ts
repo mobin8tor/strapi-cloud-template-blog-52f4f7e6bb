@@ -782,6 +782,192 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiIncomeAdditionalIncomeIncomeAdditionalIncome
+  extends Struct.SingleTypeSchema {
+  collectionName: 'income_additional_incomes';
+  info: {
+    displayName: 'Income - Additional Income';
+    pluralName: 'income-additional-incomes';
+    singularName: 'income-additional-income';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    amount_label: Schema.Attribute.String;
+    child_support_label: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    frequency_label: Schema.Attribute.String;
+    header: Schema.Attribute.String;
+    investment_income_label: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::income-additional-income.income-additional-income'
+    > &
+      Schema.Attribute.Private;
+    no_additional_income_label: Schema.Attribute.String;
+    other_label: Schema.Attribute.String;
+    pension_label: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiIncomeAssetsOrInvestmentIncomeAssetsOrInvestment
+  extends Struct.SingleTypeSchema {
+  collectionName: 'income_assets_or_investments';
+  info: {
+    description: '';
+    displayName: 'Income - Assets or Investments';
+    pluralName: 'income-assets-or-investments';
+    singularName: 'income-assets-or-investment';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cash_label: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    estimated_value_label: Schema.Attribute.String;
+    header: Schema.Attribute.String;
+    investments_label: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::income-assets-or-investment.income-assets-or-investment'
+    > &
+      Schema.Attribute.Private;
+    no_answer_label: Schema.Attribute.String;
+    no_assets_investments_label: Schema.Attribute.String;
+    other_label: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    real_estate_label: Schema.Attribute.String;
+    savings_label: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiIncomeEmploymentDetailIncomeEmploymentDetail
+  extends Struct.SingleTypeSchema {
+  collectionName: 'income_employment_details';
+  info: {
+    description: '';
+    displayName: 'Income - Employment Details';
+    pluralName: 'income-employment-details';
+    singularName: 'income-employment-detail';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    company_name_label: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    employed_header: Schema.Attribute.String;
+    full_time_label: Schema.Attribute.String;
+    gross_annual_income_label: Schema.Attribute.String;
+    job_title_label: Schema.Attribute.String;
+    job_type_label: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::income-employment-detail.income-employment-detail'
+    > &
+      Schema.Attribute.Private;
+    part_time_label: Schema.Attribute.String;
+    previous_employer_header: Schema.Attribute.String;
+    previous_employer_no_label: Schema.Attribute.String;
+    previous_employer_subheader: Schema.Attribute.String;
+    previous_employer_yes_label: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    seasonal_label: Schema.Attribute.String;
+    secondary_employment_details_header: Schema.Attribute.String;
+    secondary_employment_header: Schema.Attribute.String;
+    secondary_employment_no_label: Schema.Attribute.String;
+    secondary_employment_yes_label: Schema.Attribute.String;
+    self_employed_business_type_label: Schema.Attribute.String;
+    self_employed_header: Schema.Attribute.String;
+    self_employed_label: Schema.Attribute.String;
+    self_employed_payment_type_label: Schema.Attribute.String;
+    start_date_label: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiIncomeEmploymentStatusIncomeEmploymentStatus
+  extends Struct.SingleTypeSchema {
+  collectionName: 'income_employment_statuses';
+  info: {
+    displayName: 'Income - Employment Status';
+    pluralName: 'income-employment-statuses';
+    singularName: 'income-employment-status';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    employed_label: Schema.Attribute.String;
+    header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::income-employment-status.income-employment-status'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    self_employed_label: Schema.Attribute.String;
+    unemployed_label: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiIncomeOverviewIncomeOverview
+  extends Struct.SingleTypeSchema {
+  collectionName: 'income_overviews';
+  info: {
+    displayName: 'Income - Overview';
+    pluralName: 'income-overviews';
+    singularName: 'income-overview';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::income-overview.income-overview'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    subheader: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPageAboutUsPageAboutUs extends Struct.SingleTypeSchema {
   collectionName: 'page_about_uses';
   info: {
@@ -1861,6 +2047,11 @@ declare module '@strapi/strapi' {
       'api::eligibility-visa-type.eligibility-visa-type': ApiEligibilityVisaTypeEligibilityVisaType;
       'api::eligibility-work-auth.eligibility-work-auth': ApiEligibilityWorkAuthEligibilityWorkAuth;
       'api::global.global': ApiGlobalGlobal;
+      'api::income-additional-income.income-additional-income': ApiIncomeAdditionalIncomeIncomeAdditionalIncome;
+      'api::income-assets-or-investment.income-assets-or-investment': ApiIncomeAssetsOrInvestmentIncomeAssetsOrInvestment;
+      'api::income-employment-detail.income-employment-detail': ApiIncomeEmploymentDetailIncomeEmploymentDetail;
+      'api::income-employment-status.income-employment-status': ApiIncomeEmploymentStatusIncomeEmploymentStatus;
+      'api::income-overview.income-overview': ApiIncomeOverviewIncomeOverview;
       'api::page-about-us.page-about-us': ApiPageAboutUsPageAboutUs;
       'api::page-blog-list.page-blog-list': ApiPageBlogListPageBlogList;
       'api::page-credit-card.page-credit-card': ApiPageCreditCardPageCreditCard;

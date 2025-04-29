@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "income_employment_statuses",
+  "info": {
+    "singularName": "income-employment-status",
+    "pluralName": "income-employment-statuses",
+    "displayName": "Income - Employment Status"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "employed_label": {
+      "type": "string"
+    },
+    "self_employed_label": {
+      "type": "string"
+    },
+    "unemployed_label": {
+      "type": "string"
+    }
+  }
+}

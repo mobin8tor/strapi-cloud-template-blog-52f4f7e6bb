@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "income_overviews",
+  "info": {
+    "singularName": "income-overview",
+    "pluralName": "income-overviews",
+    "displayName": "Income - Overview"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "subheader": {
+      "type": "string"
+    }
+  }
+}

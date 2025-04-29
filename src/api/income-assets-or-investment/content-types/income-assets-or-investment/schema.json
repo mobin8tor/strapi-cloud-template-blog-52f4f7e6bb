@@ -1,0 +1,42 @@
+{
+  "kind": "singleType",
+  "collectionName": "income_assets_or_investments",
+  "info": {
+    "singularName": "income-assets-or-investment",
+    "pluralName": "income-assets-or-investments",
+    "displayName": "Income - Assets or Investments",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "real_estate_label": {
+      "type": "string"
+    },
+    "investments_label": {
+      "type": "string"
+    },
+    "cash_label": {
+      "type": "string"
+    },
+    "savings_label": {
+      "type": "string"
+    },
+    "other_label": {
+      "type": "string"
+    },
+    "no_assets_investments_label": {
+      "type": "string"
+    },
+    "no_answer_label": {
+      "type": "string"
+    },
+    "estimated_value_label": {
+      "type": "string"
+    }
+  }
+}
