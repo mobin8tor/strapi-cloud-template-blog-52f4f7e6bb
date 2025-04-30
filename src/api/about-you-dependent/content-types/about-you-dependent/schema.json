@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_you_dependents",
+  "info": {
+    "singularName": "about-you-dependent",
+    "pluralName": "about-you-dependents",
+    "displayName": "About You - Dependents"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "none_label": {
+      "type": "string"
+    },
+    "ten_plus_label": {
+      "type": "string"
+    }
+  }
+}

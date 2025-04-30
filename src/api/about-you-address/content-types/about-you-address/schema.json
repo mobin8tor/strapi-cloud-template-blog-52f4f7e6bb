@@ -1,0 +1,44 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_you_addresses",
+  "info": {
+    "singularName": "about-you-address",
+    "pluralName": "about-you-addresses",
+    "displayName": "About You - Address"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "current_address_header": {
+      "type": "string"
+    },
+    "address_label": {
+      "type": "string"
+    },
+    "apt_suite_label": {
+      "type": "string"
+    },
+    "city_label": {
+      "type": "string"
+    },
+    "state_label": {
+      "type": "string"
+    },
+    "zip_code_label": {
+      "type": "string"
+    },
+    "living_situation_label": {
+      "type": "string"
+    },
+    "housing_payment_label": {
+      "type": "string"
+    },
+    "mailing_address_header": {
+      "type": "string"
+    },
+    "same_address_label": {
+      "type": "string"
+    }
+  }
+}

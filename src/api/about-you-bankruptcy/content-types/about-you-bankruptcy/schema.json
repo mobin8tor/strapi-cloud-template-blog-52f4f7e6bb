@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_you_bankruptcies",
+  "info": {
+    "singularName": "about-you-bankruptcy",
+    "pluralName": "about-you-bankruptcies",
+    "displayName": "About You - Bankruptcy"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "yes_label": {
+      "type": "string"
+    },
+    "no_label": {
+      "type": "string"
+    }
+  }
+}

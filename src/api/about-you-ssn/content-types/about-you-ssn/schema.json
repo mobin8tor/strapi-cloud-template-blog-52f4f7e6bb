@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_you_ssns",
+  "info": {
+    "singularName": "about-you-ssn",
+    "pluralName": "about-you-ssns",
+    "displayName": "About You - SSN"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "ssn_label": {
+      "type": "string"
+    },
+    "info_card_header": {
+      "type": "string"
+    },
+    "info_card_description": {
+      "type": "text"
+    }
+  }
+}
