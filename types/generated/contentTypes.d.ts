@@ -411,6 +411,7 @@ export interface ApiAboutYouBankruptcyAboutYouBankruptcy
   extends Struct.SingleTypeSchema {
   collectionName: 'about_you_bankruptcies';
   info: {
+    description: '';
     displayName: 'About You - Bankruptcy';
     pluralName: 'about-you-bankruptcies';
     singularName: 'about-you-bankruptcy';
@@ -422,6 +423,8 @@ export interface ApiAboutYouBankruptcyAboutYouBankruptcy
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    discharge_date_label: Schema.Attribute.String;
+    discharge_header: Schema.Attribute.String;
     header: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -566,6 +569,7 @@ export interface ApiAboutYouResidencyAboutYouResidency
   extends Struct.SingleTypeSchema {
   collectionName: 'about_you_residencies';
   info: {
+    description: '';
     displayName: 'About You - Residency';
     pluralName: 'about-you-residencies';
     singularName: 'about-you-residency';
@@ -577,6 +581,7 @@ export interface ApiAboutYouResidencyAboutYouResidency
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    expiry_label: Schema.Attribute.String;
     header: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<

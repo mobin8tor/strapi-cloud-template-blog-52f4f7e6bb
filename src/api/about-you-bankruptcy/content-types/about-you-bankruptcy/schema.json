@@ -4,7 +4,8 @@
   "info": {
     "singularName": "about-you-bankruptcy",
     "pluralName": "about-you-bankruptcies",
-    "displayName": "About You - Bankruptcy"
+    "displayName": "About You - Bankruptcy",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -17,6 +18,12 @@
       "type": "string"
     },
     "no_label": {
+      "type": "string"
+    },
+    "discharge_header": {
+      "type": "string"
+    },
+    "discharge_date_label": {
       "type": "string"
     }
   }
