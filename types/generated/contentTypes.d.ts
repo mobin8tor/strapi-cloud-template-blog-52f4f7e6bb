@@ -369,6 +369,266 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiAboutYouAddressAboutYouAddress
+  extends Struct.SingleTypeSchema {
+  collectionName: 'about_you_addresses';
+  info: {
+    displayName: 'About You - Address';
+    pluralName: 'about-you-addresses';
+    singularName: 'about-you-address';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    address_label: Schema.Attribute.String;
+    apt_suite_label: Schema.Attribute.String;
+    city_label: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    current_address_header: Schema.Attribute.String;
+    housing_payment_label: Schema.Attribute.String;
+    living_situation_label: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::about-you-address.about-you-address'
+    > &
+      Schema.Attribute.Private;
+    mailing_address_header: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    same_address_label: Schema.Attribute.String;
+    state_label: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    zip_code_label: Schema.Attribute.String;
+  };
+}
+
+export interface ApiAboutYouBankruptcyAboutYouBankruptcy
+  extends Struct.SingleTypeSchema {
+  collectionName: 'about_you_bankruptcies';
+  info: {
+    description: '';
+    displayName: 'About You - Bankruptcy';
+    pluralName: 'about-you-bankruptcies';
+    singularName: 'about-you-bankruptcy';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    discharge_date_label: Schema.Attribute.String;
+    discharge_header: Schema.Attribute.String;
+    header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::about-you-bankruptcy.about-you-bankruptcy'
+    > &
+      Schema.Attribute.Private;
+    no_label: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    yes_label: Schema.Attribute.String;
+  };
+}
+
+export interface ApiAboutYouDependentAboutYouDependent
+  extends Struct.SingleTypeSchema {
+  collectionName: 'about_you_dependents';
+  info: {
+    displayName: 'About You - Dependents';
+    pluralName: 'about-you-dependents';
+    singularName: 'about-you-dependent';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::about-you-dependent.about-you-dependent'
+    > &
+      Schema.Attribute.Private;
+    none_label: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    ten_plus_label: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAboutYouOtpAboutYouOtp extends Struct.SingleTypeSchema {
+  collectionName: 'about_you_otps';
+  info: {
+    displayName: 'About You - OTP';
+    pluralName: 'about-you-otps';
+    singularName: 'about-you-otp';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    code_label: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.String;
+    header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::about-you-otp.about-you-otp'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAboutYouOverviewAboutYouOverview
+  extends Struct.SingleTypeSchema {
+  collectionName: 'about_you_overviews';
+  info: {
+    displayName: 'About You - Overview';
+    pluralName: 'about-you-overviews';
+    singularName: 'about-you-overview';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::about-you-overview.about-you-overview'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAboutYouPhoneAboutYouPhone extends Struct.SingleTypeSchema {
+  collectionName: 'about_you_phones';
+  info: {
+    displayName: 'About You - Phone';
+    pluralName: 'about-you-phones';
+    singularName: 'about-you-phone';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    header: Schema.Attribute.String;
+    info_card_description: Schema.Attribute.Text;
+    info_card_header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::about-you-phone.about-you-phone'
+    > &
+      Schema.Attribute.Private;
+    modal_cancel_button: Schema.Attribute.String;
+    modal_continue_button: Schema.Attribute.String;
+    modal_description: Schema.Attribute.Blocks;
+    modal_header: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAboutYouResidencyAboutYouResidency
+  extends Struct.SingleTypeSchema {
+  collectionName: 'about_you_residencies';
+  info: {
+    description: '';
+    displayName: 'About You - Residency';
+    pluralName: 'about-you-residencies';
+    singularName: 'about-you-residency';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    expiry_label: Schema.Attribute.String;
+    header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::about-you-residency.about-you-residency'
+    > &
+      Schema.Attribute.Private;
+    nationality_label: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    when_move_usa_label: Schema.Attribute.String;
+  };
+}
+
+export interface ApiAboutYouSsnAboutYouSsn extends Struct.SingleTypeSchema {
+  collectionName: 'about_you_ssns';
+  info: {
+    displayName: 'About You - SSN';
+    pluralName: 'about-you-ssns';
+    singularName: 'about-you-ssn';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    header: Schema.Attribute.String;
+    info_card_description: Schema.Attribute.Text;
+    info_card_header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::about-you-ssn.about-you-ssn'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    ssn_label: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiApplicationGlobalApplicationGlobal
   extends Struct.SingleTypeSchema {
   collectionName: 'application_globals';
@@ -2035,6 +2295,14 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::about-you-address.about-you-address': ApiAboutYouAddressAboutYouAddress;
+      'api::about-you-bankruptcy.about-you-bankruptcy': ApiAboutYouBankruptcyAboutYouBankruptcy;
+      'api::about-you-dependent.about-you-dependent': ApiAboutYouDependentAboutYouDependent;
+      'api::about-you-otp.about-you-otp': ApiAboutYouOtpAboutYouOtp;
+      'api::about-you-overview.about-you-overview': ApiAboutYouOverviewAboutYouOverview;
+      'api::about-you-phone.about-you-phone': ApiAboutYouPhoneAboutYouPhone;
+      'api::about-you-residency.about-you-residency': ApiAboutYouResidencyAboutYouResidency;
+      'api::about-you-ssn.about-you-ssn': ApiAboutYouSsnAboutYouSsn;
       'api::application-global.application-global': ApiApplicationGlobalApplicationGlobal;
       'api::article.article': ApiArticleArticle;
       'api::contact-us.contact-us': ApiContactUsContactUs;

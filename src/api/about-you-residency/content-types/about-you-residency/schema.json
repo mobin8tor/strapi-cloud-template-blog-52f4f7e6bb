@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_you_residencies",
+  "info": {
+    "singularName": "about-you-residency",
+    "pluralName": "about-you-residencies",
+    "displayName": "About You - Residency",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "nationality_label": {
+      "type": "string"
+    },
+    "when_move_usa_label": {
+      "type": "string"
+    },
+    "expiry_label": {
+      "type": "string"
+    }
+  }
+}

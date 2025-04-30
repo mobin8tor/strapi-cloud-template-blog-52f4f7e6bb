@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_you_otps",
+  "info": {
+    "singularName": "about-you-otp",
+    "pluralName": "about-you-otps",
+    "displayName": "About You - OTP"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "code_label": {
+      "type": "string"
+    }
+  }
+}

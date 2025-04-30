@@ -1,0 +1,17 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_you_overviews",
+  "info": {
+    "singularName": "about-you-overview",
+    "pluralName": "about-you-overviews",
+    "displayName": "About You - Overview"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    }
+  }
+}

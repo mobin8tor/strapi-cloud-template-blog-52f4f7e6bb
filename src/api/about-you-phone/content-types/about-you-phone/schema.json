@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_you_phones",
+  "info": {
+    "singularName": "about-you-phone",
+    "pluralName": "about-you-phones",
+    "displayName": "About You - Phone"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "info_card_header": {
+      "type": "string"
+    },
+    "info_card_description": {
+      "type": "text"
+    },
+    "modal_header": {
+      "type": "string"
+    },
+    "modal_description": {
+      "type": "blocks"
+    },
+    "modal_cancel_button": {
+      "type": "string"
+    },
+    "modal_continue_button": {
+      "type": "string"
+    }
+  }
+}
