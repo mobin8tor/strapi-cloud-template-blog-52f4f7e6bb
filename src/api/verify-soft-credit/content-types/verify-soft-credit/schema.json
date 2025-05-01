@@ -4,7 +4,8 @@
   "info": {
     "singularName": "verify-soft-credit",
     "pluralName": "verify-soft-credits",
-    "displayName": "Verify - Soft Credit"
+    "displayName": "Verify - Soft Credit",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,13 +15,13 @@
       "type": "string"
     },
     "consent_checkbox_label": {
-      "type": "string"
+      "type": "text"
     },
     "info_card_header": {
       "type": "string"
     },
     "info_card_description": {
-      "type": "string"
+      "type": "text"
     }
   }
 }

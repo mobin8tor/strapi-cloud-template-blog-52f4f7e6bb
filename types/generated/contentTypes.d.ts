@@ -1861,6 +1861,7 @@ export interface ApiVerifyBankDetailVerifyBankDetail
   extends Struct.SingleTypeSchema {
   collectionName: 'verify_bank_details';
   info: {
+    description: '';
     displayName: 'Verify - Bank Details';
     pluralName: 'verify-bank-details';
     singularName: 'verify-bank-detail';
@@ -1874,9 +1875,9 @@ export interface ApiVerifyBankDetailVerifyBankDetail
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
     header: Schema.Attribute.String;
-    info_card_description: Schema.Attribute.String;
+    info_card_description: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1938,7 +1939,7 @@ export interface ApiVerifyHardCheckVerifyHardCheck
     draftAndPublish: true;
   };
   attributes: {
-    consent_checkbox_label: Schema.Attribute.String;
+    consent_checkbox_label: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -2076,6 +2077,7 @@ export interface ApiVerifySoftCreditVerifySoftCredit
   extends Struct.SingleTypeSchema {
   collectionName: 'verify_soft_credits';
   info: {
+    description: '';
     displayName: 'Verify - Soft Credit';
     pluralName: 'verify-soft-credits';
     singularName: 'verify-soft-credit';
@@ -2084,12 +2086,12 @@ export interface ApiVerifySoftCreditVerifySoftCredit
     draftAndPublish: true;
   };
   attributes: {
-    consent_checkbox_label: Schema.Attribute.String;
+    consent_checkbox_label: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     header: Schema.Attribute.String;
-    info_card_description: Schema.Attribute.String;
+    info_card_description: Schema.Attribute.Text;
     info_card_header: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "verify-bank-detail",
     "pluralName": "verify-bank-details",
-    "displayName": "Verify - Bank Details"
+    "displayName": "Verify - Bank Details",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,7 +15,7 @@
       "type": "string"
     },
     "description": {
-      "type": "string"
+      "type": "text"
     },
     "account_number_label": {
       "type": "string"
@@ -26,7 +27,7 @@
       "type": "string"
     },
     "info_card_description": {
-      "type": "string"
+      "type": "text"
     }
   }
 }

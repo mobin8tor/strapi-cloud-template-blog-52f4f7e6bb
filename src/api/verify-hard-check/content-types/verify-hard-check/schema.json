@@ -15,7 +15,7 @@
       "type": "string"
     },
     "consent_checkbox_label": {
-      "type": "string"
+      "type": "text"
     }
   }
 }
