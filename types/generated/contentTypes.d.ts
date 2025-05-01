@@ -1824,6 +1824,7 @@ export interface ApiVerifyBankAccountVerifyBankAccount
   extends Struct.SingleTypeSchema {
   collectionName: 'verify_bank_accounts';
   info: {
+    description: '';
     displayName: 'Verify - Bank Account';
     pluralName: 'verify-bank-accounts';
     singularName: 'verify-bank-account';
@@ -1838,7 +1839,7 @@ export interface ApiVerifyBankAccountVerifyBankAccount
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     header: Schema.Attribute.String;
-    info_card_text: Schema.Attribute.String;
+    info_card_text: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1894,6 +1895,7 @@ export interface ApiVerifyBankDocumentVerifyBankDocument
   extends Struct.SingleTypeSchema {
   collectionName: 'verify_bank_documents';
   info: {
+    description: '';
     displayName: 'Verify - Bank Documents';
     pluralName: 'verify-bank-documents';
     singularName: 'verify-bank-document';
@@ -1905,10 +1907,7 @@ export interface ApiVerifyBankDocumentVerifyBankDocument
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    document_bullet: Schema.Attribute.Component<
-      'shared.repeatable-text',
-      false
-    >;
+    document_bullet: Schema.Attribute.Component<'shared.repeatable-text', true>;
     header: Schema.Attribute.String;
     info_card_header: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
