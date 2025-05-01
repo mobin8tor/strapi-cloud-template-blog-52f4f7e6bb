@@ -45,15 +45,21 @@
       "type": "string"
     },
     "autopay_card_description": {
-      "type": "string"
+      "type": "text"
     },
     "next_button_text": {
       "type": "string"
     },
     "single_offer_description": {
-      "type": "string"
+      "type": "text"
     },
     "counteroffer_header": {
+      "type": "string"
+    },
+    "counteroffer_description": {
+      "type": "text"
+    },
+    "single_offer_subheader": {
       "type": "string"
     }
   }

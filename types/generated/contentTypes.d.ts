@@ -2013,7 +2013,8 @@ export interface ApiVerifyOfferSelectVerifyOfferSelect
   attributes: {
     amount_selection_label: Schema.Attribute.String;
     autopay_card_checkbox_label: Schema.Attribute.String;
-    autopay_card_description: Schema.Attribute.String;
+    autopay_card_description: Schema.Attribute.Text;
+    counteroffer_description: Schema.Attribute.Text;
     counteroffer_header: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -2033,7 +2034,8 @@ export interface ApiVerifyOfferSelectVerifyOfferSelect
     offer_card_orig_fee_label: Schema.Attribute.String;
     offer_card_repayment_period_label: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    single_offer_description: Schema.Attribute.String;
+    single_offer_description: Schema.Attribute.Text;
+    single_offer_subheader: Schema.Attribute.String;
     subheader: Schema.Attribute.String;
     term_selection_label: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
