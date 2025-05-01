@@ -2001,6 +2001,7 @@ export interface ApiVerifyOfferSelectVerifyOfferSelect
   extends Struct.SingleTypeSchema {
   collectionName: 'verify_offer_selects';
   info: {
+    description: '';
     displayName: 'Verify - Offer Select';
     pluralName: 'verify-offer-selects';
     singularName: 'verify-offer-select';
@@ -2012,6 +2013,7 @@ export interface ApiVerifyOfferSelectVerifyOfferSelect
     amount_selection_label: Schema.Attribute.String;
     autopay_card_checkbox_label: Schema.Attribute.String;
     autopay_card_description: Schema.Attribute.String;
+    counteroffer_header: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -2030,6 +2032,7 @@ export interface ApiVerifyOfferSelectVerifyOfferSelect
     offer_card_orig_fee_label: Schema.Attribute.String;
     offer_card_repayment_period_label: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    single_offer_description: Schema.Attribute.String;
     subheader: Schema.Attribute.String;
     term_selection_label: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;

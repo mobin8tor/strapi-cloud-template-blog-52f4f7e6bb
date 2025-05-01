@@ -4,7 +4,8 @@
   "info": {
     "singularName": "verify-offer-select",
     "pluralName": "verify-offer-selects",
-    "displayName": "Verify - Offer Select"
+    "displayName": "Verify - Offer Select",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -47,6 +48,12 @@
       "type": "string"
     },
     "next_button_text": {
+      "type": "string"
+    },
+    "single_offer_description": {
+      "type": "string"
+    },
+    "counteroffer_header": {
       "type": "string"
     }
   }
