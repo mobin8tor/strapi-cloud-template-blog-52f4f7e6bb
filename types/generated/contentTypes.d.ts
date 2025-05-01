@@ -1930,7 +1930,8 @@ export interface ApiVerifyHardCheckVerifyHardCheck
   extends Struct.SingleTypeSchema {
   collectionName: 'verify_hard_checks';
   info: {
-    displayName: 'Verify - Hard Check';
+    description: '';
+    displayName: 'Verify - Hard Credit';
     pluralName: 'verify-hard-checks';
     singularName: 'verify-hard-check';
   };

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "verify-hard-check",
     "pluralName": "verify-hard-checks",
-    "displayName": "Verify - Hard Check"
+    "displayName": "Verify - Hard Credit",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
