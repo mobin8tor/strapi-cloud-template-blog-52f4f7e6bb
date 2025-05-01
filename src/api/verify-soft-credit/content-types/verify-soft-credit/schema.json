@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "verify_soft_credits",
+  "info": {
+    "singularName": "verify-soft-credit",
+    "pluralName": "verify-soft-credits",
+    "displayName": "Verify - Soft Credit"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "consent_checkbox_label": {
+      "type": "string"
+    },
+    "info_card_header": {
+      "type": "string"
+    },
+    "info_card_description": {
+      "type": "string"
+    }
+  }
+}

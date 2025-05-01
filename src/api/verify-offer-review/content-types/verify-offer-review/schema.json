@@ -1,0 +1,47 @@
+{
+  "kind": "singleType",
+  "collectionName": "verify_offer_reviews",
+  "info": {
+    "singularName": "verify-offer-review",
+    "pluralName": "verify-offer-reviews",
+    "displayName": "Verify - Offer Review"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "loan_amount_label": {
+      "type": "string"
+    },
+    "repayment_term_label": {
+      "type": "string"
+    },
+    "interest_rate_label": {
+      "type": "string"
+    },
+    "estimated_monthly_payment_label": {
+      "type": "string"
+    },
+    "origination_fee_label": {
+      "type": "string"
+    },
+    "origination_fee_text": {
+      "type": "text"
+    },
+    "info_card_header": {
+      "type": "string"
+    },
+    "info_card_bullet": {
+      "displayName": "Repeatable Text",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.repeatable-text"
+    }
+  }
+}

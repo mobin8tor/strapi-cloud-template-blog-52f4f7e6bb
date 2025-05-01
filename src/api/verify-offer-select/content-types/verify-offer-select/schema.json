@@ -1,0 +1,53 @@
+{
+  "kind": "singleType",
+  "collectionName": "verify_offer_selects",
+  "info": {
+    "singularName": "verify-offer-select",
+    "pluralName": "verify-offer-selects",
+    "displayName": "Verify - Offer Select"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "subheader": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "offer_card_apr_label": {
+      "type": "string"
+    },
+    "offer_card_est_monthly_payment_label": {
+      "type": "string"
+    },
+    "offer_card_repayment_period_label": {
+      "type": "string"
+    },
+    "offer_card_orig_fee_label": {
+      "type": "string"
+    },
+    "offer_card_description": {
+      "type": "text"
+    },
+    "amount_selection_label": {
+      "type": "string"
+    },
+    "term_selection_label": {
+      "type": "string"
+    },
+    "autopay_card_checkbox_label": {
+      "type": "string"
+    },
+    "autopay_card_description": {
+      "type": "string"
+    },
+    "next_button_text": {
+      "type": "string"
+    }
+  }
+}

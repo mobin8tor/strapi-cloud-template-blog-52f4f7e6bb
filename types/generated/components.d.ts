@@ -178,6 +178,16 @@ export interface SharedMetricCard extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedRepeatableText extends Struct.ComponentSchema {
+  collectionName: 'components_shared_repeatable_texts';
+  info: {
+    displayName: 'Repeatable Text';
+  };
+  attributes: {
+    text: Schema.Attribute.String;
+  };
+}
+
 export interface SharedResourceCard extends Struct.ComponentSchema {
   collectionName: 'components_shared_resource_cards';
   info: {
@@ -221,6 +231,7 @@ declare module '@strapi/strapi' {
       'shared.link': SharedLink;
       'shared.media': SharedMedia;
       'shared.metric-card': SharedMetricCard;
+      'shared.repeatable-text': SharedRepeatableText;
       'shared.resource-card': SharedResourceCard;
       'shared.section': SharedSection;
     }

@@ -1788,6 +1788,256 @@ export interface ApiSectionLoanStepSectionLoanStep
   };
 }
 
+export interface ApiVerifyAuthorizeVerifyAuthorize
+  extends Struct.SingleTypeSchema {
+  collectionName: 'verify_authorizes';
+  info: {
+    displayName: 'Verify - Authorize';
+    pluralName: 'verify-authorizes';
+    singularName: 'verify-authorize';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.String;
+    full_name_label: Schema.Attribute.String;
+    header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::verify-authorize.verify-authorize'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    submit_button_text: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiVerifyBankAccountVerifyBankAccount
+  extends Struct.SingleTypeSchema {
+  collectionName: 'verify_bank_accounts';
+  info: {
+    displayName: 'Verify - Bank Account';
+    pluralName: 'verify-bank-accounts';
+    singularName: 'verify-bank-account';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cancel_toast_description: Schema.Attribute.Text;
+    cancel_toast_header: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    header: Schema.Attribute.String;
+    info_card_text: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::verify-bank-account.verify-bank-account'
+    > &
+      Schema.Attribute.Private;
+    no_bank_link_text: Schema.Attribute.String;
+    no_bank_text: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    success_toast_description: Schema.Attribute.Text;
+    success_toast_header: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiVerifyBankDetailVerifyBankDetail
+  extends Struct.SingleTypeSchema {
+  collectionName: 'verify_bank_details';
+  info: {
+    displayName: 'Verify - Bank Details';
+    pluralName: 'verify-bank-details';
+    singularName: 'verify-bank-detail';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    account_number_label: Schema.Attribute.String;
+    account_type_label: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.String;
+    header: Schema.Attribute.String;
+    info_card_description: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::verify-bank-detail.verify-bank-detail'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    routing_number_label: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiVerifyBankDocumentVerifyBankDocument
+  extends Struct.SingleTypeSchema {
+  collectionName: 'verify_bank_documents';
+  info: {
+    displayName: 'Verify - Bank Documents';
+    pluralName: 'verify-bank-documents';
+    singularName: 'verify-bank-document';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    document_bullet: Schema.Attribute.Component<
+      'shared.repeatable-text',
+      false
+    >;
+    header: Schema.Attribute.String;
+    info_card_header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::verify-bank-document.verify-bank-document'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    upload_documents_description: Schema.Attribute.String;
+    upload_documents_header: Schema.Attribute.String;
+  };
+}
+
+export interface ApiVerifyHardCheckVerifyHardCheck
+  extends Struct.SingleTypeSchema {
+  collectionName: 'verify_hard_checks';
+  info: {
+    displayName: 'Verify - Hard Check';
+    pluralName: 'verify-hard-checks';
+    singularName: 'verify-hard-check';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    consent_checkbox_label: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::verify-hard-check.verify-hard-check'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiVerifyOfferReviewVerifyOfferReview
+  extends Struct.SingleTypeSchema {
+  collectionName: 'verify_offer_reviews';
+  info: {
+    displayName: 'Verify - Offer Review';
+    pluralName: 'verify-offer-reviews';
+    singularName: 'verify-offer-review';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.String;
+    estimated_monthly_payment_label: Schema.Attribute.String;
+    header: Schema.Attribute.String;
+    info_card_bullet: Schema.Attribute.Component<
+      'shared.repeatable-text',
+      true
+    >;
+    info_card_header: Schema.Attribute.String;
+    interest_rate_label: Schema.Attribute.String;
+    loan_amount_label: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::verify-offer-review.verify-offer-review'
+    > &
+      Schema.Attribute.Private;
+    origination_fee_label: Schema.Attribute.String;
+    origination_fee_text: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    repayment_term_label: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiVerifyOfferSelectVerifyOfferSelect
+  extends Struct.SingleTypeSchema {
+  collectionName: 'verify_offer_selects';
+  info: {
+    displayName: 'Verify - Offer Select';
+    pluralName: 'verify-offer-selects';
+    singularName: 'verify-offer-select';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    amount_selection_label: Schema.Attribute.String;
+    autopay_card_checkbox_label: Schema.Attribute.String;
+    autopay_card_description: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::verify-offer-select.verify-offer-select'
+    > &
+      Schema.Attribute.Private;
+    next_button_text: Schema.Attribute.String;
+    offer_card_apr_label: Schema.Attribute.String;
+    offer_card_description: Schema.Attribute.Text;
+    offer_card_est_monthly_payment_label: Schema.Attribute.String;
+    offer_card_orig_fee_label: Schema.Attribute.String;
+    offer_card_repayment_period_label: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    subheader: Schema.Attribute.String;
+    term_selection_label: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiVerifyOverviewVerifyOverview
   extends Struct.SingleTypeSchema {
   collectionName: 'verify_overviews';
@@ -1808,6 +2058,38 @@ export interface ApiVerifyOverviewVerifyOverview
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::verify-overview.verify-overview'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiVerifySoftCreditVerifySoftCredit
+  extends Struct.SingleTypeSchema {
+  collectionName: 'verify_soft_credits';
+  info: {
+    displayName: 'Verify - Soft Credit';
+    pluralName: 'verify-soft-credits';
+    singularName: 'verify-soft-credit';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    consent_checkbox_label: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    header: Schema.Attribute.String;
+    info_card_description: Schema.Attribute.String;
+    info_card_header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::verify-soft-credit.verify-soft-credit'
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
@@ -2367,7 +2649,15 @@ declare module '@strapi/strapi' {
       'api::section-footer.section-footer': ApiSectionFooterSectionFooter;
       'api::section-get-started.section-get-started': ApiSectionGetStartedSectionGetStarted;
       'api::section-loan-step.section-loan-step': ApiSectionLoanStepSectionLoanStep;
+      'api::verify-authorize.verify-authorize': ApiVerifyAuthorizeVerifyAuthorize;
+      'api::verify-bank-account.verify-bank-account': ApiVerifyBankAccountVerifyBankAccount;
+      'api::verify-bank-detail.verify-bank-detail': ApiVerifyBankDetailVerifyBankDetail;
+      'api::verify-bank-document.verify-bank-document': ApiVerifyBankDocumentVerifyBankDocument;
+      'api::verify-hard-check.verify-hard-check': ApiVerifyHardCheckVerifyHardCheck;
+      'api::verify-offer-review.verify-offer-review': ApiVerifyOfferReviewVerifyOfferReview;
+      'api::verify-offer-select.verify-offer-select': ApiVerifyOfferSelectVerifyOfferSelect;
       'api::verify-overview.verify-overview': ApiVerifyOverviewVerifyOverview;
+      'api::verify-soft-credit.verify-soft-credit': ApiVerifySoftCreditVerifySoftCredit;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

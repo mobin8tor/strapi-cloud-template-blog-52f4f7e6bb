@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "verify_hard_checks",
+  "info": {
+    "singularName": "verify-hard-check",
+    "pluralName": "verify-hard-checks",
+    "displayName": "Verify - Hard Check"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "consent_checkbox_label": {
+      "type": "string"
+    }
+  }
+}

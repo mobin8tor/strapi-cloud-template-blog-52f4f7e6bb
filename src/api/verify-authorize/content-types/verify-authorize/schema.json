@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "verify_authorizes",
+  "info": {
+    "singularName": "verify-authorize",
+    "pluralName": "verify-authorizes",
+    "displayName": "Verify - Authorize"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "full_name_label": {
+      "type": "string"
+    },
+    "submit_button_text": {
+      "type": "string"
+    }
+  }
+}

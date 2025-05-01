@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "verify_bank_details",
+  "info": {
+    "singularName": "verify-bank-detail",
+    "pluralName": "verify-bank-details",
+    "displayName": "Verify - Bank Details"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "account_number_label": {
+      "type": "string"
+    },
+    "account_type_label": {
+      "type": "string"
+    },
+    "routing_number_label": {
+      "type": "string"
+    },
+    "info_card_description": {
+      "type": "string"
+    }
+  }
+}
