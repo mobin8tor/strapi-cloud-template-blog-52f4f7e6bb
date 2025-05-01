@@ -1788,6 +1788,35 @@ export interface ApiSectionLoanStepSectionLoanStep
   };
 }
 
+export interface ApiVerifyOverviewVerifyOverview
+  extends Struct.SingleTypeSchema {
+  collectionName: 'verify_overviews';
+  info: {
+    displayName: 'Verify - Overview';
+    pluralName: 'verify-overviews';
+    singularName: 'verify-overview';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::verify-overview.verify-overview'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -2338,6 +2367,7 @@ declare module '@strapi/strapi' {
       'api::section-footer.section-footer': ApiSectionFooterSectionFooter;
       'api::section-get-started.section-get-started': ApiSectionGetStartedSectionGetStarted;
       'api::section-loan-step.section-loan-step': ApiSectionLoanStepSectionLoanStep;
+      'api::verify-overview.verify-overview': ApiVerifyOverviewVerifyOverview;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
