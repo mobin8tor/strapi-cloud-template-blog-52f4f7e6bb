@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "verify_bank_documents",
+  "info": {
+    "singularName": "verify-bank-document",
+    "pluralName": "verify-bank-documents",
+    "displayName": "Verify - Bank Documents",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "info_card_header": {
+      "type": "string"
+    },
+    "document_bullet": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.repeatable-text"
+    },
+    "upload_documents_header": {
+      "type": "string"
+    },
+    "upload_documents_description": {
+      "type": "string"
+    }
+  }
+}

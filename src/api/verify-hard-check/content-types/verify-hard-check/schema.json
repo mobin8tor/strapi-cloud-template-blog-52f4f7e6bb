@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "verify_hard_checks",
+  "info": {
+    "singularName": "verify-hard-check",
+    "pluralName": "verify-hard-checks",
+    "displayName": "Verify - Hard Credit",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "consent_checkbox_label": {
+      "type": "text"
+    }
+  }
+}

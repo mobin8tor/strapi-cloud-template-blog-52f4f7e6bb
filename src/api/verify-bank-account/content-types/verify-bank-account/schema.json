@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "verify_bank_accounts",
+  "info": {
+    "singularName": "verify-bank-account",
+    "pluralName": "verify-bank-accounts",
+    "displayName": "Verify - Bank Account",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "info_card_text": {
+      "type": "text"
+    },
+    "cancel_toast_header": {
+      "type": "string"
+    },
+    "cancel_toast_description": {
+      "type": "text"
+    },
+    "success_toast_header": {
+      "type": "string"
+    },
+    "success_toast_description": {
+      "type": "text"
+    },
+    "no_bank_text": {
+      "type": "string"
+    },
+    "no_bank_link_text": {
+      "type": "string"
+    }
+  }
+}

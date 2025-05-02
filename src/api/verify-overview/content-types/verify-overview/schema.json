@@ -1,0 +1,17 @@
+{
+  "kind": "singleType",
+  "collectionName": "verify_overviews",
+  "info": {
+    "singularName": "verify-overview",
+    "pluralName": "verify-overviews",
+    "displayName": "Verify - Overview"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header": {
+      "type": "string"
+    }
+  }
+}

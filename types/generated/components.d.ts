@@ -178,15 +178,13 @@ export interface SharedMetricCard extends Struct.ComponentSchema {
   };
 }
 
-export interface SharedQuote extends Struct.ComponentSchema {
-  collectionName: 'components_shared_quotes';
+export interface SharedRepeatableText extends Struct.ComponentSchema {
+  collectionName: 'components_shared_repeatable_texts';
   info: {
-    displayName: 'Quote';
-    icon: 'indent';
+    displayName: 'Repeatable Text';
   };
   attributes: {
-    body: Schema.Attribute.Text;
-    title: Schema.Attribute.String;
+    text: Schema.Attribute.String;
   };
 }
 
@@ -202,18 +200,6 @@ export interface SharedResourceCard extends Struct.ComponentSchema {
   };
 }
 
-export interface SharedRichText extends Struct.ComponentSchema {
-  collectionName: 'components_shared_rich_texts';
-  info: {
-    description: '';
-    displayName: 'Rich text';
-    icon: 'align-justify';
-  };
-  attributes: {
-    body: Schema.Attribute.RichText;
-  };
-}
-
 export interface SharedSection extends Struct.ComponentSchema {
   collectionName: 'components_shared_sections';
   info: {
@@ -226,33 +212,6 @@ export interface SharedSection extends Struct.ComponentSchema {
     header: Schema.Attribute.String;
     primary_button_text: Schema.Attribute.String;
     subheader: Schema.Attribute.String;
-  };
-}
-
-export interface SharedSeo extends Struct.ComponentSchema {
-  collectionName: 'components_shared_seos';
-  info: {
-    description: '';
-    displayName: 'Seo';
-    icon: 'allergies';
-    name: 'Seo';
-  };
-  attributes: {
-    metaDescription: Schema.Attribute.Text & Schema.Attribute.Required;
-    metaTitle: Schema.Attribute.String & Schema.Attribute.Required;
-    shareImage: Schema.Attribute.Media<'images'>;
-  };
-}
-
-export interface SharedSlider extends Struct.ComponentSchema {
-  collectionName: 'components_shared_sliders';
-  info: {
-    description: '';
-    displayName: 'Slider';
-    icon: 'address-book';
-  };
-  attributes: {
-    files: Schema.Attribute.Media<'images', true>;
   };
 }
 
@@ -272,12 +231,9 @@ declare module '@strapi/strapi' {
       'shared.link': SharedLink;
       'shared.media': SharedMedia;
       'shared.metric-card': SharedMetricCard;
-      'shared.quote': SharedQuote;
+      'shared.repeatable-text': SharedRepeatableText;
       'shared.resource-card': SharedResourceCard;
-      'shared.rich-text': SharedRichText;
       'shared.section': SharedSection;
-      'shared.seo': SharedSeo;
-      'shared.slider': SharedSlider;
     }
   }
 }
