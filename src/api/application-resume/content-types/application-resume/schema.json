@@ -1,0 +1,51 @@
+{
+  "kind": "singleType",
+  "collectionName": "application_resumes",
+  "info": {
+    "singularName": "application-resume",
+    "pluralName": "application-resumes",
+    "displayName": "Application - Resume",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "resume_header": {
+      "type": "string"
+    },
+    "resume_description": {
+      "type": "text"
+    },
+    "email_address_label": {
+      "type": "string"
+    },
+    "send_verification_button_text": {
+      "type": "string"
+    },
+    "otp_header": {
+      "type": "string"
+    },
+    "otp_description": {
+      "type": "text"
+    },
+    "otp_code_label": {
+      "type": "string"
+    },
+    "resend_code_text": {
+      "type": "string"
+    },
+    "resend_code_link": {
+      "type": "string"
+    },
+    "continue_application_button_text": {
+      "type": "string"
+    },
+    "email_sent_success_header": {
+      "type": "string"
+    },
+    "email_sent_success_description": {
+      "type": "text"
+    }
+  }
+}

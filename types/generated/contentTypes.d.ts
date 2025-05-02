@@ -666,6 +666,47 @@ export interface ApiApplicationGlobalApplicationGlobal
   };
 }
 
+export interface ApiApplicationResumeApplicationResume
+  extends Struct.SingleTypeSchema {
+  collectionName: 'application_resumes';
+  info: {
+    description: '';
+    displayName: 'Application - Resume';
+    pluralName: 'application-resumes';
+    singularName: 'application-resume';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    continue_application_button_text: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email_address_label: Schema.Attribute.String;
+    email_sent_success_description: Schema.Attribute.Text;
+    email_sent_success_header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::application-resume.application-resume'
+    > &
+      Schema.Attribute.Private;
+    otp_code_label: Schema.Attribute.String;
+    otp_description: Schema.Attribute.Text;
+    otp_header: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    resend_code_link: Schema.Attribute.String;
+    resend_code_text: Schema.Attribute.String;
+    resume_description: Schema.Attribute.Text;
+    resume_header: Schema.Attribute.String;
+    send_verification_button_text: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   collectionName: 'articles';
   info: {
@@ -2624,6 +2665,7 @@ declare module '@strapi/strapi' {
       'api::about-you-residency.about-you-residency': ApiAboutYouResidencyAboutYouResidency;
       'api::about-you-ssn.about-you-ssn': ApiAboutYouSsnAboutYouSsn;
       'api::application-global.application-global': ApiApplicationGlobalApplicationGlobal;
+      'api::application-resume.application-resume': ApiApplicationResumeApplicationResume;
       'api::article.article': ApiArticleArticle;
       'api::contact-us.contact-us': ApiContactUsContactUs;
       'api::eligibility-about-you.eligibility-about-you': ApiEligibilityAboutYouEligibilityAboutYou;
