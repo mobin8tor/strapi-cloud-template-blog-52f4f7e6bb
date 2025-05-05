@@ -47,6 +47,11 @@
     },
     "legal_text": {
       "type": "blocks"
+    },
+    "legal_links": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.footer-link-group"
     }
   }
 }

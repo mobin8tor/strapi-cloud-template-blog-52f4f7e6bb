@@ -1741,6 +1741,7 @@ export interface ApiSectionFooterSectionFooter extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     facebook_url: Schema.Attribute.String;
     instagram_url: Schema.Attribute.String;
+    legal_links: Schema.Attribute.Component<'shared.footer-link-group', false>;
     legal_text: Schema.Attribute.Blocks;
     link_group_1: Schema.Attribute.Component<'shared.footer-link-group', false>;
     link_group_2: Schema.Attribute.Component<'shared.footer-link-group', false>;
