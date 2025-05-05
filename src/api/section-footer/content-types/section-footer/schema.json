@@ -39,6 +39,12 @@
       "repeatable": false,
       "component": "shared.footer-link-group"
     },
+    "privacy_policy_label": {
+      "type": "string"
+    },
+    "terms_of_use_label": {
+      "type": "string"
+    },
     "legal_text": {
       "type": "blocks"
     },

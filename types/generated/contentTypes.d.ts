@@ -1753,7 +1753,9 @@ export interface ApiSectionFooterSectionFooter extends Struct.SingleTypeSchema {
       'api::section-footer.section-footer'
     > &
       Schema.Attribute.Private;
+    privacy_policy_label: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    terms_of_use_label: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
