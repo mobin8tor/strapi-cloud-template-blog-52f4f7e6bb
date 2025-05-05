@@ -40,6 +40,15 @@
     },
     "phone_description": {
       "type": "string"
+    },
+    "live_chat_title": {
+      "type": "string"
+    },
+    "live_chat_description": {
+      "type": "string"
+    },
+    "live_chat_link_text": {
+      "type": "string"
     }
   }
 }

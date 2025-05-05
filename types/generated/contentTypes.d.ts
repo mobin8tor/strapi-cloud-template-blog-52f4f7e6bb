@@ -761,6 +761,9 @@ export interface ApiContactUsContactUs extends Struct.SingleTypeSchema {
     email_email: Schema.Attribute.Email;
     email_title: Schema.Attribute.String;
     header: Schema.Attribute.String;
+    live_chat_description: Schema.Attribute.String;
+    live_chat_link_text: Schema.Attribute.String;
+    live_chat_title: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
