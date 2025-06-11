@@ -19,7 +19,7 @@
     "green_card_label": {
       "type": "string"
     },
-    "opt_label": {
+    "gold_card_label": {
       "type": "string"
     },
     "us_citizen_label": {
