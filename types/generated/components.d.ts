@@ -149,6 +149,7 @@ export interface SharedLink extends Struct.ComponentSchema {
         'privacy-policy',
         'terms-of-use',
         'legal',
+        'blog',
       ]
     >;
     Text: Schema.Attribute.String;
