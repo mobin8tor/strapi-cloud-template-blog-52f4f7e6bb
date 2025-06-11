@@ -22,6 +22,9 @@
     "opt_label": {
       "type": "string"
     },
+    "gold_card_label": {
+      "type": "string"
+    },
     "us_citizen_label": {
       "type": "string"
     },
