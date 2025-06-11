@@ -965,6 +965,7 @@ export interface ApiEligibilityResidencyStatusEligibilityResidencyStatus
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    gold_card_label: Schema.Attribute.String;
     green_card_label: Schema.Attribute.String;
     header: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
