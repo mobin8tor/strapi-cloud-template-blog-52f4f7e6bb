@@ -1009,6 +1009,7 @@ export interface ApiEligibilityVisaTypeEligibilityVisaType
     g1_label: Schema.Attribute.String;
     h1b_label: Schema.Attribute.String;
     h1b_renewed_label: Schema.Attribute.String;
+    h4_ead_label: Schema.Attribute.String;
     header: Schema.Attribute.String;
     j1_label: Schema.Attribute.String;
     l1_label: Schema.Attribute.String;

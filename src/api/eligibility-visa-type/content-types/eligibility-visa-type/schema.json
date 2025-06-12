@@ -55,6 +55,9 @@
     "j1_label": {
       "type": "string"
     },
+    "h4_ead_label": {
+      "type": "string"
+    },
     "other_label": {
       "type": "string"
     }
