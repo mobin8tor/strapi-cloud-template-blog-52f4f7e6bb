@@ -847,6 +847,40 @@ export interface ApiEligibilityBankAccountEligibilityBankAccount
   };
 }
 
+export interface ApiEligibilityBankruptcyEligibilityBankruptcy
+  extends Struct.SingleTypeSchema {
+  collectionName: 'eligibility_bankruptcies';
+  info: {
+    description: '';
+    displayName: 'Eligibility - Bankruptcy';
+    pluralName: 'eligibility-bankruptcies';
+    singularName: 'eligibility-bankruptcy';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    discharge_date_label: Schema.Attribute.String;
+    discharge_header: Schema.Attribute.String;
+    header: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::eligibility-bankruptcy.eligibility-bankruptcy'
+    > &
+      Schema.Attribute.Private;
+    no_label: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    yes_label: Schema.Attribute.String;
+  };
+}
+
 export interface ApiEligibilityCreditLoanEligibilityCreditLoan
   extends Struct.SingleTypeSchema {
   collectionName: 'eligibility_credit_loans';
@@ -2676,6 +2710,7 @@ declare module '@strapi/strapi' {
       'api::contact-us.contact-us': ApiContactUsContactUs;
       'api::eligibility-about-you.eligibility-about-you': ApiEligibilityAboutYouEligibilityAboutYou;
       'api::eligibility-bank-account.eligibility-bank-account': ApiEligibilityBankAccountEligibilityBankAccount;
+      'api::eligibility-bankruptcy.eligibility-bankruptcy': ApiEligibilityBankruptcyEligibilityBankruptcy;
       'api::eligibility-credit-loan.eligibility-credit-loan': ApiEligibilityCreditLoanEligibilityCreditLoan;
       'api::eligibility-no-bank-account.eligibility-no-bank-account': ApiEligibilityNoBankAccountEligibilityNoBankAccount;
       'api::eligibility-overview.eligibility-overview': ApiEligibilityOverviewEligibilityOverview;
