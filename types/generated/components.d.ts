@@ -150,6 +150,7 @@ export interface SharedLink extends Struct.ComponentSchema {
         'terms-of-use',
         'legal',
         'blog',
+        'accessibility',
       ]
     >;
     Text: Schema.Attribute.String;

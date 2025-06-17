@@ -45,6 +45,9 @@
     "terms_of_use_label": {
       "type": "string"
     },
+    "accessibility_label": {
+      "type": "string"
+    },
     "legal_text": {
       "type": "blocks"
     },

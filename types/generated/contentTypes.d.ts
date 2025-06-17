@@ -1801,6 +1801,7 @@ export interface ApiSectionFooterSectionFooter extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    accessibility_label: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
