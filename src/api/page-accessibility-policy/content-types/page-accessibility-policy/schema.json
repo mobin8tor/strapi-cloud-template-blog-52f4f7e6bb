@@ -1,0 +1,17 @@
+{
+  "kind": "singleType",
+  "collectionName": "accessibility_policies",
+  "info": {
+    "singularName": "page-accessibility-policy",
+    "pluralName": "page-accessibility-policies",
+    "displayName": "Page - Accessibility"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "content": {
+      "type": "blocks"
+    }
+  }
+}

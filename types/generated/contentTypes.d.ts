@@ -1345,6 +1345,35 @@ export interface ApiPageAboutUsPageAboutUs extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiPageAccessibilityPolicyPageAccessibilityPolicy
+  extends Struct.SingleTypeSchema {
+  collectionName: 'accessibility_policies';
+  info: {
+    displayName: 'Page - Accessibility';
+    pluralName: 'page-accessibility-policies';
+    singularName: 'page-accessibility-policy';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    content: Schema.Attribute.Blocks;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::page-accessibility-policy.page-accessibility-policy'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPageBlogListPageBlogList extends Struct.SingleTypeSchema {
   collectionName: 'page_blog_lists';
   info: {
@@ -2724,6 +2753,7 @@ declare module '@strapi/strapi' {
       'api::income-employment-status.income-employment-status': ApiIncomeEmploymentStatusIncomeEmploymentStatus;
       'api::income-overview.income-overview': ApiIncomeOverviewIncomeOverview;
       'api::page-about-us.page-about-us': ApiPageAboutUsPageAboutUs;
+      'api::page-accessibility-policy.page-accessibility-policy': ApiPageAccessibilityPolicyPageAccessibilityPolicy;
       'api::page-blog-list.page-blog-list': ApiPageBlogListPageBlogList;
       'api::page-credit-card.page-credit-card': ApiPageCreditCardPageCreditCard;
       'api::page-eligibility.page-eligibility': ApiPageEligibilityPageEligibility;
