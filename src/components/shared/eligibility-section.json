@@ -17,6 +17,11 @@
     },
     "header_icon": {
       "type": "string"
+    },
+    "icon_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false
     }
   }
 }
